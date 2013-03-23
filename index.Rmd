@@ -1,8 +1,8 @@
 ---
 title       : Python class
 subtitle    : for beginners
-author      : Lyudmila Vaseva && Philipp Borgers
-job         : Humans
+author      : Lyudmila Vaseva (vaseva@mi.fu-berlin.de)
+job         : Philipp Borgers (borgers@mi.fu-berlin.de)
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      #
@@ -10,20 +10,17 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 ---
 
-# Konzept:
+## Konzept:
 
-## Tag 0:
+### Tag 0:
 
 Einführung in Python mit DIY-Einschüben
+
 Schließt ab mit einem Mini-Projekt
 
-##Tag 1:
+### Tag 1:
 
 Größeres Projekt aka Riesen-Projekt
-
-##Tag 2:
-
-siehe oben
 
 Mögliche Projekte:
 
@@ -34,11 +31,11 @@ Mögliche Projekte:
 
 ---
 
-# python
+## python
 
 Was ist Python?
 
-# Python installieren
+## Python installieren
 
     aptitude install python3
 
@@ -48,14 +45,14 @@ Für Windows:
 
 ---
 
-# Good to know
+## Good to know
 
 * Interpretierte Sprache
 * dynamisch getypt
 
 --
 
-# Erste Schritte
+## Erste Schritte
 
     $ python
     Python 2.7.3 (default, Aug  1 2012, 05:16:07)
@@ -65,7 +62,7 @@ Für Windows:
 
 ---
 
-# Erste Schritte 02
+## Erste Schritte 02
 (Skripte schreiben^^)
 
 * Editor öffnen
@@ -75,7 +72,7 @@ Für Windows:
 
 ---
 
-# Dokumentation
+## Dokumentation
 
 Wo finde ich Dokumentation?
 
@@ -87,7 +84,7 @@ Wo finde ich Dokumentation?
 
 ---
 
-# Objekte
+## Objekte
 
 In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
@@ -100,7 +97,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-# Variablen
+## Variablen
 
     x = 1
     pi = 3.145
@@ -108,7 +105,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-# Variablen reassignment
+## Variablen reassignment
 
     pi = 2.4
     x = 2
@@ -120,7 +117,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-# Datentypen
+## Datentypen
 
 ---
 
@@ -201,7 +198,7 @@ Zu was wird der folgenden Ausdruck ausgewertet:
 
 ---
 
-### Aufgabe
+## Aufgabe
 
 Erstelle eine String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.
 Lass dir von dem String nur den Substring ausgeben, der deinen Vornamen enthält.
@@ -226,7 +223,7 @@ Man kann auf einzelne Listenelemente zugreifen und die manipulieren
 
 ---
 
-### Aufgabe
+## Aufgabe
 
     l = ["Egon", "Bert", "Hildegard", "Dörte"]
 
@@ -251,7 +248,7 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ---
 
-### Aufgabe
+## Aufgabe
 
     d = {'Egon':123456}
 
@@ -272,14 +269,14 @@ nachschaust.
 
 ---
 
-### Aufgabe
+## Aufgabe
 
 Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Elemente
 3 der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ---
 
-# Funktionen
+## Funktionen
 
 * generalized Beheavior vs. specialized Behaviour
 * reusable
@@ -290,7 +287,7 @@ Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Element
 
 ---
 
-# Objekte und Funktionen
+## Objekte und Funktionen
 
     "Egon".upper()
     bar = [1,2,3,4]
@@ -298,7 +295,7 @@ Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Element
 
 ---
 
-# Beispiele für vordefinierte Funktionen
+## Beispiele für vordefinierte Funktionen
 
     len()
     str()
@@ -306,7 +303,7 @@ Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Element
 
 ---
 
-# Kontrollfluß
+## Kontrollfluß
 
 ---
 
@@ -372,7 +369,7 @@ Wann braucht man die überhaupt?
 
 ---
 
-# Module
+## Module
 
 Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
 
@@ -382,9 +379,8 @@ Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
 
 ---
 
-# Eingabe / Ausgabe
+## Eingabe / Ausgabe
 
-## sdtin/sdtout/stderr
 
     name = raw_input("Tell me your name")
     print(name)
@@ -392,7 +388,7 @@ Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
 
 ---
 
-## for real
+## sdtin/sdtout/stderr
 
     import sys
     sys.stdout.write("fooo\n")
@@ -419,7 +415,11 @@ Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
 
 ---
 
-### Aufgabe
+## with-statement
+
+---
+
+## Aufgabe
 
 1. Eine Datei einlesen, z.B. den Code eures Programms
 2. Inhalt der Datei in eine andere Datei schreiben
@@ -428,7 +428,7 @@ Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
 
 ---
 
-### Aufgabe2
+## Aufgabe2
 
 1. Schreibe in eine Datei deinen Namen, dein Geburtsdatum, deine Schuhgröße,
 deine Lieblingsfarbe, ob du Katzen magst und die ersten 2 Zeilen von deinem
@@ -442,15 +442,10 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 3. Öffne die Datei erneut, diesmal in Lesemodus.
 4. Lese die Datei Zeile für Zeile aus (Doku angucken ;))
 
----
-
-# Main-Funktion
-
-    __main__
 
 ---
 
-# Klassen Definition
+## Klassen Definition
 
     class Dog(object):
         legs = 4
@@ -462,7 +457,7 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
 ---
 
-# Objekte instanzieren
+## Objekte instanzieren
 
 
     sharo = Dog("sharo", "philipp")
@@ -470,7 +465,7 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
 ---
 
-# Vererbung
+## Vererbung
 
 Hier ein sinnfreies Beispiel:
 
@@ -483,6 +478,10 @@ Hier ein sinnfreies Beispiel:
         legs = 4
         favorite_food = "köfte"
 
+---
+
+## Vererbung
+
     class Human(Animal):
         legs = 2
         favorite_food = "falafel"
@@ -493,30 +492,28 @@ Hier ein sinnfreies Beispiel:
         favorite_food = "pizza"
         likes_computers = True
         hobbys = ["painting", "ponnies"]
+---
+
+## Main-Funktion
+
+    __main__
 
 ---
 
-# Klassen?
-    * objekte instanziieren
-    * main()
-    * self
-
----
-
-# Anonyme Funktionen
+## Anonyme Funktionen
     //vlt zu hardcore?
 
     lambda x: x**2
 
 ---
 
-# [List comprehensions](http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions)
+## [List comprehensions](http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions)
 
     squares = [x**2 for x in range(10)]
 
 ---
 
-# Funktionale Programmierung in Python
+## Funktionale Programmierung in Python
 
     map(lambda x: x**2, range(10))
     filter(lambda x: x % 2 == 0, range(10))
