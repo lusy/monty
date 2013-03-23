@@ -106,21 +106,6 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-## Variablen reassignment
-
-```python
-    pi = 3.145
-    y = pi
-    pi = 2.4
-    # jetzt zeigen sowohl pi=2.4 als auch y = 2.4; x ist 2
-```
-
----
-
-### Aufgabe
-
----
-
 ## Datentypen
 
 ---
@@ -320,7 +305,7 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ## Funktionen
 
-* generalized Beheavior vs. specialized Behaviour
+* generalized Behaviour vs. specialized Behaviour
 * reusable
 * können Ergebnis zurückliefern
 * die Einrückung ist wichtig!
@@ -336,7 +321,6 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
     def my_function(a, b):
         print(a, b)
-
 ---
 
 ## Funktionen mit Default-Parametern
