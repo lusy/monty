@@ -38,7 +38,10 @@ Mögliche Projekte:
 * Interpretierte Sprache
 * dynamisch getypt
 * klare Syntax, flache Lernkurve
-* wird mit verschiedenen Programmierparadigmen benutzt: imperativ, funktional, objekt-orientiert
+* verschiedenen Programmierparadigmen:
+    * imperativ
+    * funktional
+    * objekt-orientiert
 
 ---
 
