@@ -130,6 +130,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ## Operatoren auf Zahlen
 
+```python
     1 + 1
     2 - 1
     2 * 3
@@ -137,6 +138,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
     4 / 5
     5 % 2
     1 ** 2
+```
 
 ---
 
@@ -212,6 +214,7 @@ Finde andere Funktionen, die man auf Strings anwenden kann. Was Funktionen sind 
 Listen können erweitert oder verkleinert werden.
 Man kann auf einzelne Listenelemente zugreifen und die manipulieren
 
+```python
     []
     [0,1,3,4,5]
     ["Egon", "Bert", "Hildegard", "Dörte"]
@@ -220,12 +223,15 @@ Man kann auf einzelne Listenelemente zugreifen und die manipulieren
 
     a = [0,1,2,3,4,5]
     a.append(6)
+```
 
 ---
 
 ## Aufgabe
 
+```python
     l = ["Egon", "Bert", "Hildegard", "Dörte"]
+```
 
 Füge noch Ingo und Isolde zur Liste l hinzu.
 Gibt es da eine weitere Möglichkeit außer die einzeln mit `append()` hinzuzufügen?
@@ -244,13 +250,13 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 ## Dictionaries (Wörterbücher)
 
     {}
-    {"Lusy":"toll", "Philipp": "lol"}
+    { "Lusy": "toll", "Philipp": "lol" }
 
 ---
 
 ## Aufgabe
 
-    d = {'Egon':123456}
+    telefonbuch = { 'Egon': 123456, 'Paula': 030 }
 
 Erweitere das Dictionary d, so dass es die Telefonnumern von 3 weiteren Menschen
 enthält (also, du kannst die Namen als Keys verwenden).
