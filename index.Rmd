@@ -33,7 +33,12 @@ Mögliche Projekte:
 
 ## python
 
-Was ist Python?
+### Was ist Python?
+
+* Interpretierte Sprache
+* dynamisch getypt
+
+---
 
 ## Python installieren
 
@@ -41,18 +46,12 @@ Was ist Python?
 
 Für Windows:
 
->Get your self a fucking os.
+> Get your self a fucking os.
 
 ---
 
-## Good to know
-
-* Interpretierte Sprache
-* dynamisch getypt
-
---
-
 ## Erste Schritte
+### Python Interpreter
 
     $ python
     Python 2.7.3 (default, Aug  1 2012, 05:16:07)
@@ -63,7 +62,7 @@ Für Windows:
 ---
 
 ## Erste Schritte 02
-(Skripte schreiben^^)
+### (Skripte schreiben)
 
 * Editor öffnen
 * Datei foo.py anlegen
@@ -107,9 +106,12 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ## Variablen reassignment
 
+```python
+    pi = 3.145
+    y = pi
     pi = 2.4
-    x = 2
     # jetzt zeigen sowohl pi=2.4 als auch y = 2.4; x ist 2
+```
 
 ---
 
@@ -121,7 +123,7 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-## Numbers
+## Zahlen
 
     1
     3.145
@@ -154,16 +156,20 @@ Sinnvolle Aufgaben hier einfügen!
 
 ## Boolean
 
+```python
     True
     False
+```
 
 ---
 
 ## Boolean operators
 
+```python
     not False
     True and True
     False or True
+```
 
 ---
 
@@ -171,9 +177,11 @@ Sinnvolle Aufgaben hier einfügen!
 
 Zu was wird der folgenden Ausdruck ausgewertet:
 
+```python
     False or True and False
     True and (True or False)
     False or True and not False
+```
 
 ---
 
@@ -203,6 +211,7 @@ Zu was wird der folgenden Ausdruck ausgewertet:
 ## Aufgabe
 
 Erstelle eine String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.
+
 Lass dir von dem String nur den Substring ausgeben, der deinen Vornamen enthält.
 
 Finde andere Funktionen, die man auf Strings anwenden kann. Was Funktionen sind erklären wir später.
@@ -212,6 +221,7 @@ Finde andere Funktionen, die man auf Strings anwenden kann. Was Funktionen sind 
 ## Listen
 
 Listen können erweitert oder verkleinert werden.
+
 Man kann auf einzelne Listenelemente zugreifen und die manipulieren
 
 ```python
@@ -277,19 +287,52 @@ nachschaust.
 
 ## Aufgabe
 
-Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Elemente
-3 der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
+Speichere die Telefonnummer-Information aus der vorangegangenen Aufgabe in Tupeln.
+
+Erstelle 3 Zweiertupel und speichere diese jeweils in Variablen, die als Elemente
+drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ---
 
 ## Funktionen
 
-* generalized Beheavior vs. specialized Behaviour
-* reusable
+* generalized Beheavior vs. specialized Behaviour ?
+* reusable ?
 * können Ergebnis zurückliefern
 
     def say_hello(): # Kopf
         return "Hello" # Rumpf
+
+---
+
+## Funktionen mit Parametern
+
+    def my_function(a, b):
+        print(a, b)
+
+---
+
+## Funktionen mit Default-Parametern
+
+    def my_function(a = 1, b = 2):
+        print(a, b)
+
+    my_function()
+    my_function(2)
+    my_function(3, 4)
+    my_function(b = 4)
+
+---
+
+## Funktionen mit return-Value
+
+    def my_function():
+        return "Die Antwort auf alle Fragen"
+
+    # vs
+
+    def nothing():
+        1 + 1
 
 ---
 
@@ -298,11 +341,13 @@ Erstelle 3 Zweiertupel (und speichere die jeweils in Variablen), die als Element
     "Egon".upper()
     bar = [1,2,3,4]
     bar.reverse()
+    bar
 
 ---
 
 ## Beispiele für vordefinierte Funktionen
 
+    sort()
     len()
     str()
     print()
@@ -500,7 +545,7 @@ Hier ein sinnfreies Beispiel:
         hobbys = ["painting", "ponnies"]
 ---
 
-## Main-Funktion
+## Main-Funktion (Programm Parameter)
 
     __main__
 
