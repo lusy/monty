@@ -474,10 +474,12 @@ Wann braucht man die überhaupt?
 ## Module
 
 Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
+Es gibt einige vordefinierte Standardmodule, die nützliche Funktionen zur Verfügung stellen.
 
     import sys
-    iport time
+    import time
     from sys import stdout
+    from sys import *
 
 ---
 
