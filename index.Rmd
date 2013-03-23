@@ -37,6 +37,8 @@ Mögliche Projekte:
 
 * Interpretierte Sprache
 * dynamisch getypt
+* klare Syntax, flache Lernkurve
+* wird mit verschiedenen Programmierparadigmen benutzt: imperativ, funktional, objekt-orientiert
 
 ---
 
@@ -299,6 +301,7 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 * generalized Beheavior vs. specialized Behaviour ?
 * reusable ?
 * können Ergebnis zurückliefern
+* die Einrückung ist wichtig!
 
     def say_hello(): # Kopf
         return "Hello" # Rumpf
@@ -333,6 +336,22 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
     def nothing():
         1 + 1
+
+---
+
+## Aufgabe
+
+Definiere eine Funktion, die als Parameter deinen Namen kriegt und diesen dann printet.
+
+Definiere eine zweite Funktion, die die Fläche eines Kreises berechnet und zurückgibt.
+Welche Werte müssen hier als Parameter übergeben werden?
+
+---
+
+## Aufgabe2
+
+Definiere eine Funktion, die mindesten einen Standardparameter und mindesten einen Named Argument mit einem Defaultwert.
+Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.
 
 ---
 
@@ -403,6 +422,11 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 ## Break/Continue
 
     insert example here
+
+---
+
+## Aufgabe
+(iwas mit Kontrolfluss)
 
 ---
 
