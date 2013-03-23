@@ -453,7 +453,7 @@ Definiere eine Funktion, die mindesten einen Standardparameter und mindesten ein
 
 ## Aufgabe
 
-Definiere die Funktion divisible_by_five(a), die einen Parameter a bekommt und alle Zahlen von 1 bis a, die durch 5 teilbar sind ausgibt.
+Definiere die Funktion `divisible_by_five(a)`, die einen Parameter `a` bekommt und alle Zahlen von 1 bis `a`, die durch 5 teilbar sind, ausgibt.
 
 ---
 
