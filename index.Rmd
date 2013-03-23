@@ -325,8 +325,10 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 * können Ergebnis zurückliefern
 * die Einrückung ist wichtig!
 
+```python
     def say_hello(): # Kopf
         return "Hello" # Rumpf
+```
 
 ---
 
@@ -379,10 +381,12 @@ Definiere eine Funktion, die mindesten einen Standardparameter und mindesten ein
 
 ## Objekte und Funktionen
 
+```python
     "Egon".upper()
     bar = [1,2,3,4]
     bar.reverse()
     bar
+```
 
 ---
 
