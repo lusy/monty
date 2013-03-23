@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from Tkinter import *
 
 
@@ -24,7 +25,7 @@ class Point(Geometry):
 
     def __init__(self, x, y, fill = "red"):
         super(Point, self).__init__(fill)
-        self.x = y
+        self.x = x
         self.y = y
 
     def draw(self, canvas):
@@ -43,10 +44,12 @@ if __name__ == "__main__":
 
     # Geometrische Objekte erzeugen
     line = Line(Point(0, 0), Point(800, 800))
+    line2 = Line(Point(800, 0), Point(0, 800))
     point = Point(10, 10)
 
     # Geometrische Objekte zeichnen
     point.draw(canvas)
     line.draw(canvas)
+    line2.draw(canvas)
 
     mainloop()
