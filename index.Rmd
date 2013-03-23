@@ -262,28 +262,50 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 ## Dictionaries (Wörterbücher)
 
     {}
-    { "Lusy": "toll", "Philipp": "lol" }
+    d = { "Lusy": "toll", "Philipp": "lol" }
+    # Wie greife ich auf die Werte zu
+    d["Lusy"]
+    # Neuer Eintrag
+    d["Marian"] = "blablabla"
+    # man kann auch Werte im Dictionary updaten
+    d["Lusy"] = "blup"
+
+    d.keys()
+    d.values()
+
+    "Lusy" in d
+    del d["Lusy"]
+    "Lusy" in d
 
 ---
 
 ## Aufgabe
 
+```python
     telefonbuch = { 'Egon': 123456, 'Paula': 030 }
+```
 
-Erweitere das Dictionary d, so dass es die Telefonnumern von 3 weiteren Menschen
+Erweitere das Dictionary `telefonbuch`, so dass es die Telefonnummern von 3 weiteren Menschen
 enthält (also, du kannst die Namen als Keys verwenden).
-Füge 2 weitere Nummern hinzu.
-Speichere die Nummer von Egon in der variable egon, indem du sie im Dictionary
-nachschaust.
+Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variable `egon`.
 
 ---
 
 ## Tupel
-    # tupel sind unveränderbar (immutable)
     ("lala",'blup',"rrt")
 
+    # tupel sind unveränderbar (immutable)
     b = ("lala",'blup',"rrt")
     b.append("la") # geht nicht
+
+    # einzelne Werte zugreifen
+    b[0]
+
+    # man braucht die Klammern nicht unbedingt
+    c = "Egon", "Berndt", "Dörte" # Tuple packing
+
+    # entpacken
+    x, y, z = c
 
 ---
 
