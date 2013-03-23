@@ -320,8 +320,8 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ## Funktionen
 
-* generalized Beheavior vs. specialized Behaviour ?
-* reusable ?
+* generalized Beheavior vs. specialized Behaviour
+* reusable
 * können Ergebnis zurückliefern
 * die Einrückung ist wichtig!
 
