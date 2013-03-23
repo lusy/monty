@@ -287,10 +287,7 @@ Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variab
     b[0]
 
     # man braucht die Klammern nicht unbedingt
-    c = "Egon", "Berndt", "Dörte" # Tuple packing
-
-    # entpacken
-    x, y, z = c
+    c = "Egon", "Berndt", "Dörte"
 
 ---
 
@@ -606,13 +603,13 @@ Hier ein sinnfreies Beispiel:
 
 ## Main-Funktion (Programm Parameter)
 
-    __main__
+    if __name__ == '__main__'
 
 ---
 
 ## Anonyme Funktionen
-    //vlt zu hardcore?
 
+    #vlt zu hardcore?
     lambda x: x**2
 
 ---
