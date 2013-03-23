@@ -521,6 +521,12 @@ Es gibt einige vordefinierte Standardmodule, die n√ºtzliche Funktionen zur Verf√
 
 ## with-statement
 
+```python
+    with open("example.py") as file:
+        data = file.read()
+        print(data)
+```
+
 ---
 
 ## Aufgabe
