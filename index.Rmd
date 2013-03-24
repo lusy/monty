@@ -323,7 +323,7 @@ vs
 
 ---
 
-## Aufgabe ++
+## Aufgabe
 
 Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites Mal hinzu.
 Ist das möglich? Wie oft kommt jetzt Egon in dieser Liste vor?
@@ -756,7 +756,7 @@ Mit der `type` Funktion können wir den Type eines Objekts erfragen.
 
 ---
 
-# Python-Tools
+## Python-Tools
 
 ---
 
