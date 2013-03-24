@@ -389,6 +389,17 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ---
 
+## Casting
+
+Es ist möglich Typen zu konvertieren:
+
+    int(3.145)
+    float(23)
+    list((1, 2))
+    tuple([1,2,3])
+
+---
+
 ## Funktionen
 
 * generalized Behaviour vs. specialized Behaviour
