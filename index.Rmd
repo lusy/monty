@@ -45,6 +45,12 @@ Mögliche Projekte:
 
 ---
 
+![XKCD](http://imgs.xkcd.com/comics/python.png)
+
+Attribution: http://xkcd.com
+
+---
+
 ## Python installieren
 
     $ # debian/ubuntu
@@ -64,13 +70,17 @@ Sollte das unmöglich sein:
 ## Erste Schritte
 ### Python Interpreter
 
-    $ python
-    Python 2.7.3 (default, Aug  1 2012, 05:16:07)
+    $ python3
+    Python 3.2.3 (default, Oct 19 2012, 20:13:42)
     [GCC 4.6.3] on linux2
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
 Mit `Strg + D` oder `exit()` wird die Python-Shell wieder beendet.
+
+Gibt es auch in bunt:
+
+    $ ipython3
 
 ---
 
@@ -551,12 +561,25 @@ Wann braucht man die überhaupt?
 ## Module
 
 Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
-Es gibt einige vordefinierte Standardmodule, die nützliche Funktionen zur Verfügung stellen.
+Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügung stellen.
 
-    import sys
-    import time
-    from sys import stdout
-    from sys import *
+    import datetime
+    from datetime import datetime
+    from datetime import *
+    from sys import stdout as log
+
+Jede Python-Datei ist auch ein Modul.
+
+---
+
+## Aufgabe zu Modulen
+
+Nutze das datetime Modul um das aktuelle Datum zu erfragen. Berechne die
+Stunden, die du seit deiner Geburt auf der Erde verbracht hast. Angenommen du
+wirst 99 Jahre alt. Wie viele Sekunden bleiben dir noch?
+
+Nutze pydoc oder die Autovervollständigung von IPython um die richtigen Klassen
+und Methoden zu finden.
 
 ---
 
