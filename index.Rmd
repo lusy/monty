@@ -756,7 +756,6 @@ Mit der `type` Funktion können wir den Type eines Objekts erfragen.
 
 ## Anonyme Funktionen
 
-    #vlt zu hardcore?
     lambda x: x**2
 
 ---
