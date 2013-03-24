@@ -666,9 +666,11 @@ und Methoden zu finden.
 deine Lieblingsfarbe, ob du Katzen magst und die ersten 2 Zeilen von deinem
 Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
+```
     Schuhgröße: 42
     Ich mag schwarze Katzen.
     ...
+```
 
 2. Mach die Datei zu.
 3. Öffne die Datei erneut, diesmal in Lesemodus.
