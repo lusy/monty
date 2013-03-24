@@ -268,10 +268,10 @@ Man kann auf einzelne Listenelemente zugreifen und die manipulieren
 ## Aufgabe
 
 ```python
-    l = ["Egon", "Bert", "Hildegard", "Dörte"]
+    names = ["Egon", "Bert", "Hildegard", "Dörte"]
 ```
 
-Füge noch Ingo und Isolde zur Liste l hinzu.
+Füge noch Ingo und Isolde zur Liste `names` hinzu.
 Gibt es da eine weitere Möglichkeit außer die einzeln mit `append()` hinzuzufügen?
 Füge Friedrich Wilhelm Maximilian (Achtung!: Das ist ein Name und nicht drei!)
 an 3. Stelle in die Liste ein.
@@ -282,6 +282,42 @@ Lösche Bert aus der Liste.
 Speichere die Antworten auf die Fragen in einzelne Variablen.
 
 Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funktionen schauen.
+
+---
+
+## Mutable vs Immutable
+
+* primitive datatypes are immutable: int, bool, str, long,..
+Once created, contents cannot be updated.
+* lists and dictionaries (following) are mutable!
+
+---
+
+## Mutable vs Immutable 2
+
+Vergleich:
+
+    names = ["Egon", "Bert", "Hildegard", "Dörte"]
+    names2 = names
+    names.append("Ingo")
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names and names2 are two "labels" for the same list
+
+vs
+
+    names = names + ["Isolde"]
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
+
+---
+
+## Aufgabe ++
+(Note: Set discovery)
+
+Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites mal h
+
 
 ---
 
@@ -528,6 +564,17 @@ Es gibt einige vordefinierte Standardmodule, die nützliche Funktionen zur Verf�
     name = raw_input("Tell me your name")
     print(name)
     print("So, your name is %s" % name)
+
+---
+
+## String Formating
+
+```python
+    name = "Egon"
+    age = 142
+    likes = "cat babies"
+    print ("Hi! My name is %s, I'm %d years old and I like %s." % (name, age, likes))
+```
 
 ---
 
