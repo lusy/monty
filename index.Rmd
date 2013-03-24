@@ -77,8 +77,17 @@ Sollte das unmöglich sein:
 
 * Editor öffnen
 * Datei foo.py anlegen
-* print("Hello World") schreiben
-* python foo.py ausführen
+* Inhalt der Datei:
+
+```
+    print("Hello World")
+```
+
+* Durch python ausführen
+
+```shell
+    $ python foo.py
+```
 
 ---
 
