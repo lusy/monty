@@ -716,6 +716,20 @@ Hier ein sinnfreies Beispiel:
 
 ---
 
+## isinstance und type Funktion
+
+Mit der `isinstance` kann man überprüfen, ob ein Objekt eine Instanz einer
+Klasse ist:
+
+    lusy = Human()
+    isinstance(lusy, Human)
+
+Mit der `type` Funktion können wir den Type eines Objekts erfragen.
+
+    type(lusy)
+
+---
+
 ## Main-Funktion (Programm Parameter)
 
     if __name__ == '__main__':
