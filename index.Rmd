@@ -103,6 +103,22 @@ Wo finde ich Dokumentation?
 
 ---
 
+## pydoc
+
+Im terminal:
+
+```
+    pydoc datetime
+```
+
+Als Webserver starten:
+
+```
+    pydoc -p 1337
+```
+
+---
+
 ## Objekte
 
 In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
