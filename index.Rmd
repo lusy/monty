@@ -70,6 +70,8 @@ Sollte das unmöglich sein:
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
+Mit `Strg + D` oder `exit()` wird die Python-Shell wieder beendet.
+
 ---
 
 ## Erste Schritte 02
@@ -165,11 +167,14 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 
 ---
 
-### Aufgabe:
+## Aufgabe:
 
 Was passiert wenn wir `5 + 3 / 2.0` eingeben?
 
-Was passiert hier: `4 / 2 / 2`
+Was passiert hier: `4 / 2 / 2` ?
+
+Und hier `7 / 2` ?
+Was sollte man tun, um die Antwort `3.5` zu bekommen?
 
 Sinnvolle Aufgaben hier einfügen!
 
@@ -194,7 +199,7 @@ Sinnvolle Aufgaben hier einfügen!
 
 ---
 
-### Aufgabe
+## Aufgabe
 
 Zu was wird der folgenden Ausdruck ausgewertet:
 
@@ -215,6 +220,8 @@ Zu was wird der folgenden Ausdruck ausgewertet:
     blup
     blip
     """
+    "And I'm saying \"Hello!\""
+    "There you go!\n"
 
 ---
 
