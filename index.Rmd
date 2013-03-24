@@ -314,10 +314,12 @@ vs
 ---
 
 ## Aufgabe ++
-(Note: Set discovery)
 
-Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites mal h
+Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites Mal hinzu.
+Ist das möglich? Wie oft kommt jetzt Egon in dieser Liste vor?
 
+Stell dir vor, wir hätten gerne eine Liste, wo alle Personen höchstens einmal vorkommen.
+Was wäre eine geeignete Datenstruktur hierfür? Schau in der Dokumentation nach!
 
 ---
 
