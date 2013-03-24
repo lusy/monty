@@ -45,6 +45,12 @@ Mögliche Projekte:
 
 ---
 
+![XKCD](http://imgs.xkcd.com/comics/python.png)
+
+Attribution: http://xkcd.com
+
+---
+
 ## Python installieren
 
     $ # debian/ubuntu
