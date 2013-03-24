@@ -327,6 +327,7 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
     def my_function(a, b):
         print(a, b)
+
 ---
 
 ## Funktionen mit Default-Parametern
@@ -608,6 +609,7 @@ Hier ein sinnfreies Beispiel:
         favorite_food = "pizza"
         likes_computers = True
         hobbys = ["painting", "ponnies"]
+
 ---
 
 ## Main-Funktion (Programm Parameter)
