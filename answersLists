@@ -1,0 +1,26 @@
+Füge noch Ingo und Isolde zur Liste `names` hinzu.
+Gibt es da eine weitere Möglichkeit außer die einzeln mit `append()` hinzuzufügen?
+
+names.extend(["Ingo", "Isolde"])
+
+Füge Friedrich Wilhelm Maximilian (Achtung!: Das ist ein Name und nicht drei!) an 3. Stelle in die Liste ein.
+
+names.insert(3,"Friedrich Wilhelm Maximilian")
+
+An welcher Stelle befindet sich Hildegard?
+
+names.index("Hildegard")
+
+Wer ist an 4. Stelle?
+
+names[4]
+
+Lösche Bert aus der Liste.
+
+positionBert = names.index("Bert")
+del names[positionBert]
+
+Speichere die Antworten auf die Fragen in einzelne Variablen.
+
+Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funktionen schauen.
+
