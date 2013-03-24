@@ -47,11 +47,17 @@ Mögliche Projekte:
 
 ## Python installieren
 
-    aptitude install python3
+    $ # debian/ubuntu
+    $ aptitude install python3
+    $ # arch
+    $ pacman -S python3
 
 Für Windows:
 
-> Get your self a fucking os.
+> Get yourself a fucking os.
+
+Sollte das unmöglich sein:
+[http://www.python.org/getit/](http://www.python.org/getit/)
 
 ---
 
