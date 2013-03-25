@@ -636,7 +636,7 @@ und Methoden zu finden.
 ## Eingabe / Ausgabe
 
 
-    name = raw_input("Tell me your name")
+    name = input("Tell me your name")
     print(name)
     print("So, your name is %s" % name)
 

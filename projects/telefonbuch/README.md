@@ -16,23 +16,23 @@ Die Anwendung erwartet vom Anwender Eingaben:
     * _get_ __name__
     * _search_ __regex__
 
-Nutze zur Eingabeaufforderung den `raw_input` Befehl:
+Nutze zur Eingabeaufforderung die `input` Funktion:
 
 ```python
-    input = raw_input(">")
+    data = input(">")
 ```
 
 Nutze die String-Operationen um die Eingabe zubearbeiten:
 
 ```python
-    input.split(" ")
+    data.split(" ")
 ```
 
 Nutze bedingte Anweisungen um die Eingabe des Nutzers zu überprüfen und
 entsprechende Funktionen auszuführen:
 
 ```python
-    if input[0] == "help":
+    if data[0] == "help":
         ...
 ```
 
