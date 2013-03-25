@@ -216,6 +216,7 @@ Zu was wird der folgende Ausdruck ausgewertet:
 
 ```python
     x < y and y <= z
+    x < y <= z # Verkettung von Vergleichsoperatoren
 ```
 
 ---
