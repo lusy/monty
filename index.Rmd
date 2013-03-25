@@ -219,7 +219,7 @@ Zu was wird der folgende Ausdruck ausgewertet:
 
 ## Boolische Ausdrücke (boolean expressions)
 
-```
+```python
     x < y and y <= z
 ```
 
