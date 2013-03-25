@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python class</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Python class">
+  <meta name="author" content="Lyudmila Vaseva (vaseva@mi.fu-berlin.de)">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+    <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1>Python class</h1>
+        <h2>for beginners</h2>
+        <p>Lyudmila Vaseva (vaseva@mi.fu-berlin.de)<br/>Philipp Borgers (borgers@mi.fu-berlin.de)</p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Konzept:</h2>
+  </hgroup>
+  <article>
+    <h3>Tag 0:</h3>
+
+<p>Einführung in Python mit DIY-Einschüben</p>
+
+<p>Schließt ab mit einem Mini-Projekt</p>
+
+<h3>Tag 1:</h3>
+
+<p>Größeres Projekt aka Riesen-Projekt</p>
+
+<p>Mögliche Projekte:</p>
+
+<ul>
+<li>Punkt/Linie/Bla/Geometriekramm</li>
+<li>sinnloses Textadventure</li>
+<li>Lexer/Compiler</li>
+<li>grep</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>python</h2>
+  </hgroup>
+  <article>
+    <h3>Was ist Python?</h3>
+
+<ul>
+<li>Interpretierte Sprache</li>
+<li>dynamisch getypt</li>
+<li>klare Syntax, flache Lernkurve</li>
+<li>verschiedenen Programmierparadigmen:
+
+<ul>
+<li>imperativ</li>
+<li>funktional</li>
+<li>objekt-orientiert</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    <p><img src="http://imgs.xkcd.com/comics/python.png" alt="XKCD"></p>
+
+<p>Attribution: <a href="http://xkcd.com">http://xkcd.com</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Python installieren</h2>
+  </hgroup>
+  <article>
+    <pre><code>$ # debian/ubuntu
+$ aptitude install python3
+$ # arch
+$ pacman -S python3
+</code></pre>
+
+<p>Für Windows:</p>
+
+<blockquote>
+<p>Get yourself a fucking os.</p>
+</blockquote>
+
+<p>Sollte das unmöglich sein:
+<a href="http://www.python.org/getit/">http://www.python.org/getit/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Erste Schritte</h2>
+  </hgroup>
+  <article>
+    <h3>Python Interpreter</h3>
+
+<pre><code>$ python3
+Python 3.2.3 (default, Oct 19 2012, 20:13:42)
+[GCC 4.6.3] on linux2
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+
+<p>Mit <code>Strg + D</code> oder <code>exit()</code> wird die Python-Shell wieder beendet.</p>
+
+<p>Gibt es auch in bunt:</p>
+
+<pre><code>$ ipython3
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Erste Schritte 02</h2>
+  </hgroup>
+  <article>
+    <h3>(Skripte schreiben)</h3>
+
+<ul>
+<li>Editor öffnen</li>
+<li>Datei foo.py anlegen</li>
+<li>Inhalt der Datei:</li>
+</ul>
+
+<pre><code>    print(&quot;Hello World&quot;)
+</code></pre>
+
+<ul>
+<li>Durch python ausführen</li>
+</ul>
+
+<pre><code class="shell">    $ python foo.py
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Dokumentation</h2>
+  </hgroup>
+  <article>
+    <p>Wo finde ich Dokumentation?</p>
+
+<ul>
+<li>pydoc</li>
+<li>official documentation <a href="http://docs.python.org/3/">http://docs.python.org/3/</a></li>
+<li>tutorial: <a href="http://docs.python.org/3/tutorial/index.html">http://docs.python.org/3/tutorial/index.html</a></li>
+<li>lib ref: <a href="http://docs.python.org/3/library/index.html">http://docs.python.org/3/library/index.html</a></li>
+<li>language ref: <a href="http://docs.python.org/3/reference/index.html">http://docs.python.org/3/reference/index.html</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>pydoc</h2>
+  </hgroup>
+  <article>
+    <p>Im terminal:</p>
+
+<pre><code>    pydoc datetime
+</code></pre>
+
+<p>Als Webserver starten:</p>
+
+<pre><code>    pydoc -p 1337
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Objekte</h2>
+  </hgroup>
+  <article>
+    <p>In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:</p>
+
+<ul>
+<li>Numbers: integer, reals</li>
+<li>boolean</li>
+<li>strings</li>
+<li>listen</li>
+<li>sets</li>
+<li>dictionaries</li>
+<li>tupel</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>Variablen</h2>
+  </hgroup>
+  <article>
+    <p>Verweise auf Objekte, z.B. auf Zahlen:</p>
+
+<pre><code>x = 1
+pi = 3.145
+y = pi
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Datentypen</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-12" style="background:;">
+  <hgroup>
+    <h2>Zahlen</h2>
+  </hgroup>
+  <article>
+    <pre><code>1
+3.145
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Operatoren auf Zahlen</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    1 + 1
+    2 - 1
+    2 * 3
+    10 / 0.0
+    4 / 5
+    5 % 2
+    1 ** 2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Aufgabe:</h2>
+  </hgroup>
+  <article>
+    <p>Was passiert wenn wir <code>5 + 3 / 2.0</code> eingeben?</p>
+
+<p>Was passiert hier: <code>4 / 2 / 2</code> ?</p>
+
+<p>Und hier <code>7 / 2</code> ?
+Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Boolean</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    True
+    False
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Boolean operators</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    not False # bindet am stärksten
+    True and True # bindet am zweit stärksten
+    False or True # schwächster Operator
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-17" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Zu was werden die folgenden Ausdrück ausgewertet:</p>
+
+<pre><code class="python">    False or True and False
+    True and (True or False)
+    False or True and not False
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Boolische Ausdrücke (boolean expressions)</h2>
+  </hgroup>
+  <article>
+    <pre><code>    x &lt; y and y &lt;= z
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-19" style="background:;">
+  <hgroup>
+    <h2>Strings</h2>
+  </hgroup>
+  <article>
+    <pre><code>&quot;foo&quot;
+&#39;bar lalala&#39;
+&quot;&quot;&quot;
+blabla
+blup
+blip
+&quot;&quot;&quot;
+&quot;And I&#39;m saying \&quot;Hello!\&quot;&quot; # escaped string
+&quot;There you go!\n&quot; # string mit Zeilenumbruch
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-20" style="background:;">
+  <hgroup>
+    <h2>String operators</h2>
+  </hgroup>
+  <article>
+    <pre><code>&quot;Hello &quot; + &quot;World&quot;
+&quot;Hello&quot;[0]
+&quot;Hello&quot;[-1]
+&quot;Hello&quot;[1:4]
+&quot;hello&quot;.upper()
+&quot;HeLLo&quot;.lower()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-21" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Erstelle einen String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.</p>
+
+<p>Lass dir von dem String nur den Substring ausgeben, der deinen Vornamen enthält.</p>
+
+<p>Finde andere Funktionen, die man auf Strings anwenden kann (pydoc). Was Funktionen sind erklären wir später.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-22" style="background:;">
+  <hgroup>
+    <h2>Listen</h2>
+  </hgroup>
+  <article>
+    <p>Listen können erweitert oder verkleinert werden.</p>
+
+<p>Man kann auf einzelne Listenelemente zugreifen und die manipulieren</p>
+
+<pre><code class="python">    []
+    [0,1,3,4,5]
+    [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;]
+    [&quot;Egon&quot;, 2.4, &quot;Bert&quot;, True] # es müssen nicht alle Werte vom selben Datentyp sein
+    [9,8,7,6,5,4,3,2,1][4]
+
+    a = [0,1,2,3,4,5]
+    a.append(6)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    names = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;]
+</code></pre>
+
+<p>Füge noch Ingo und Isolde zur Liste <code>names</code> hinzu.
+Gibt es da eine weitere Möglichkeit außer die einzeln mit <code>append()</code> hinzuzufügen?
+Füge Friedrich Wilhelm Maximilian (Achtung!: Das ist ein Name und nicht drei!)
+an 3. Stelle in die Liste ein.
+An welcher Stelle befindet sich Hildegard?
+Wer ist an 4. Stelle?
+Lösche Bert aus der Liste.</p>
+
+<p>Speichere die Antworten auf die Fragen in einzelne Variablen.</p>
+
+<p>Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funktionen schauen.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Mutable vs Immutable Objects</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Primitive Datentypen sind unveränderbar (immutable):
+
+<ul>
+<li>int, bool, str, long, ...</li>
+<li>Sie können nachträglich nicht verändert werden</li>
+</ul></li>
+<li>Listen, Dictionaries, etc. sind veränderbar (mutable)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Mutable vs Immutable 2</h2>
+  </hgroup>
+  <article>
+    <p>Vergleich:</p>
+
+<pre><code>names = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;]
+names2 = names
+names.append(&quot;Ingo&quot;)
+# names = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;]
+# names2 = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;]
+# names und names2 sind zwei &quot;Labels&quot; für die selbe Liste
+</code></pre>
+
+<p>vs</p>
+
+<pre><code>names = names + [&quot;Isolde&quot;]
+# names = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;, &quot;Isolde&quot;]
+# names2 = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;]
+# bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-26" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites Mal hinzu.
+Ist das möglich? Wie oft kommt jetzt Egon in dieser Liste vor?</p>
+
+<p>Stell dir vor, wir hätten gerne eine Liste, wo alle Personen höchstens einmal vorkommen.
+Was wäre eine geeignete Datenstruktur hierfür? Schau in der Dokumentation nach!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>Dictionaries (Wörterbücher)</h2>
+  </hgroup>
+  <article>
+    <pre><code>{} # leeres Wörterbuch
+d = { &quot;Lusy&quot;: &quot;toll&quot;, &quot;Philipp&quot;: &quot;lol&quot; }
+# Wie greife ich auf die Werte zu
+d[&quot;Lusy&quot;]
+# Neuer Eintrag
+d[&quot;Marian&quot;] = &quot;blablabla&quot;
+# man kann auch Werte im Dictionary updaten
+d[&quot;Lusy&quot;] = &quot;blup&quot;
+
+d.keys()
+d.values()
+
+&quot;Lusy&quot; in d
+del d[&quot;Lusy&quot;]
+&quot;Lusy&quot; in d
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    telefonbuch = { &#39;Egon&#39;: 123456, &#39;Paula&#39;: 030 }
+</code></pre>
+
+<p>Erweitere das Dictionary <code>telefonbuch</code>, so dass es die Telefonnummern von 3 weiteren Menschen
+enthält (also, du kannst die Namen als Keys verwenden).</p>
+
+<p>Schaue die Nummer von Egon in <code>telefonbuch</code> nach und speichere sie in der Variable <code>egon</code>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-29" style="background:;">
+  <hgroup>
+    <h2>Tupel</h2>
+  </hgroup>
+  <article>
+    <pre><code>(&quot;lala&quot;,&#39;blup&#39;,&quot;rrt&quot;)
+
+# tupel sind unveränderbar (immutable)
+b = (&quot;lala&quot;,&#39;blup&#39;,&quot;rrt&quot;)
+b.append(&quot;la&quot;) # geht nicht
+
+# einzelne Werte zugreifen
+b[0]
+
+# man braucht die Klammern nicht unbedingt
+c = &quot;Berndt&quot;, &quot;Dörte&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Speichere die Telefonnummer-Information aus der vorangegangenen Aufgabe in Tupeln.</p>
+
+<p>Erstelle 3 Zweiertupel und speichere diese jeweils in Variablen, die als Elemente
+drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-31" style="background:;">
+  <hgroup>
+    <h2>Casting</h2>
+  </hgroup>
+  <article>
+    <p>Es ist möglich Typen zu konvertieren:</p>
+
+<pre><code class="python">    int(3.145)
+    float(23)
+    int(&quot;42&quot;)
+    list((1, 2))
+    tuple([1,2,3])
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-32" style="background:;">
+  <hgroup>
+    <h2>Funktionen</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>generalized Behaviour vs. specialized Behaviour</li>
+<li>wiederverwendbar</li>
+<li>können Ergebnis zurückliefern</li>
+<li>die Einrückung ist wichtig!</li>
+</ul>
+
+<pre><code class="python">    def say_hello(): # Kopf
+        return &quot;Hello&quot; # Rumpf
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-33" style="background:;">
+  <hgroup>
+    <h2>Funktionen mit Parametern</h2>
+  </hgroup>
+  <article>
+    <pre><code>def my_function(a, b):
+    print(a, b)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-34" style="background:;">
+  <hgroup>
+    <h2>Funktionen mit Default-Parametern</h2>
+  </hgroup>
+  <article>
+    <pre><code>def my_function(a = 1, b = 2):
+    print(a, b)
+
+my_function()
+my_function(2)
+my_function(3, 4)
+my_function(b = 4)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Funktionen mit return-Value</h2>
+  </hgroup>
+  <article>
+    <pre><code>def my_function():
+    return &quot;Die Antwort auf alle Fragen&quot;
+
+# vs
+
+def nothing():
+    1 + 1
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-36" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Definiere eine Funktion, die als Parameter deinen Namen kriegt und diesen dann printet.</p>
+
+<p>Definiere eine zweite Funktion, die die Fläche eines Kreises berechnet und zurückgibt.
+Welche Werte müssen hier als Parameter übergeben werden?</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-37" style="background:;">
+  <hgroup>
+    <h2>Aufgabe2</h2>
+  </hgroup>
+  <article>
+    <p>Definiere eine Funktion, die mindesten einen Standardparameter und mindesten
+einen Named Argument mit einem Defaultwert hat.
+Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-38" style="background:;">
+  <hgroup>
+    <h2>Objekte und Funktionen</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    &quot;Egon&quot;.upper()
+    bar = [1,2,3,4]
+    bar.reverse()
+    bar
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-39" style="background:;">
+  <hgroup>
+    <h2>Beispiele für vordefinierte Funktionen</h2>
+  </hgroup>
+  <article>
+    <pre><code>sort()
+len()
+str()
+print()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-40" style="background:;">
+  <hgroup>
+    <h2>Kontrollfluß</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-41" style="background:;">
+  <hgroup>
+    <h2>if</h2>
+  </hgroup>
+  <article>
+    <pre><code>if god_is_happy:
+    sun = &quot;is shining&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-42" style="background:;">
+  <hgroup>
+    <h2>if-else</h2>
+  </hgroup>
+  <article>
+    <pre><code>if god_is_happy:
+    sun = &quot;is shining&quot;
+else:
+    sun = &quot;isn&#39;t shining&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-43" style="background:;">
+  <hgroup>
+    <h2>if-elif-else</h2>
+  </hgroup>
+  <article>
+    <pre><code>  if god == &quot;is_happy&quot;:
+    sun = &quot;is shining&quot;
+  elif god == &quot;is_sad&quot;:
+    sun = &quot;isn&#39;t shining&quot;
+  else:
+    sun = &quot;invalid option&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-44" style="background:;">
+  <hgroup>
+    <h2>While-Schleife</h2>
+  </hgroup>
+  <article>
+    <pre><code>while(True):
+    print(&quot;endless&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-45" style="background:;">
+  <hgroup>
+    <h2>For-Schleife</h2>
+  </hgroup>
+  <article>
+    <pre><code>words = [&#39;cat&#39;, &#39;window&#39;, &#39;defenestrate&#39;]
+for w in words:
+    print(w, len(w))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-46" style="background:;">
+  <hgroup>
+    <h2>Break/Continue</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    # break - breaks out of the smallest enclosing for or while loop
+    var = 10
+    while var &gt; 0:
+        print(&#39;Current variable value :&#39;, var)
+        var = var -1
+        if var == 5:
+            break
+
+    print(&quot;Good bye!&quot;)
+
+    # continue - continues with the execution of the next iteration of the loop
+    for letter in &#39;Python&#39;:
+        if letter == &#39;h&#39;:
+            continue
+        print(&#39;Current Letter :&#39;, letter)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-47" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <p>Definiere die Funktion <code>divisible_by_five(a)</code>, die einen Parameter <code>a</code> bekommt und alle Zahlen von 1 bis <code>a</code>, die durch 5 teilbar sind, ausgibt.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-48" style="background:;">
+  <hgroup>
+    <h2>Try/Except</h2>
+  </hgroup>
+  <article>
+    <p>Wann braucht man die überhaupt?</p>
+
+<pre><code>def bad_function():
+    raise Exception(&quot;Booommm&quot;)
+
+try:
+    bad_function()
+except Exception, e:
+    print(&quot;catched: &quot; +  e)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-49" style="background:;">
+  <hgroup>
+    <h2>Module</h2>
+  </hgroup>
+  <article>
+    <p>Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
+Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügung stellen.</p>
+
+<pre><code>import datetime
+from datetime import datetime
+from datetime import *
+from sys import stdout as log
+</code></pre>
+
+<p>Jede Python-Datei ist auch ein Modul.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-50" style="background:;">
+  <hgroup>
+    <h2>Aufgabe zu Modulen</h2>
+  </hgroup>
+  <article>
+    <p>Nutze das datetime Modul um das aktuelle Datum zu erfragen. Berechne die
+Stunden, die du seit deiner Geburt auf der Erde verbracht hast. Angenommen du
+wirst 99 Jahre alt. Wie viele Sekunden bleiben dir noch?</p>
+
+<p>Nutze pydoc oder die Autovervollständigung von IPython um die richtigen Klassen
+und Methoden zu finden.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-51" style="background:;">
+  <hgroup>
+    <h2>Eingabe / Ausgabe</h2>
+  </hgroup>
+  <article>
+    <pre><code>name = raw_input(&quot;Tell me your name&quot;)
+print(name)
+print(&quot;So, your name is %s&quot; % name)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-52" style="background:;">
+  <hgroup>
+    <h2>String Formating</h2>
+  </hgroup>
+  <article>
+    <pre><code class="python">    name = &quot;Egon&quot;
+    age = 142
+    likes = &quot;cat babies&quot;
+    print (&quot;Hi! My name is %s, I&#39;m %d years old and I like %s.&quot; % (name, age, likes))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-53" style="background:;">
+  <hgroup>
+    <h2>stdin/stdout/stderr</h2>
+  </hgroup>
+  <article>
+    <pre><code>import sys
+sys.stdout.write(&quot;fooo\n&quot;)
+sys.stderr.write(&quot;This is an error message\n&quot;)
+
+sys.stdin.read()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-54" style="background:;">
+  <hgroup>
+    <h2>Dateien einlesen und schreiben</h2>
+  </hgroup>
+  <article>
+    <pre><code># LESEN
+inpFile = open(&quot;myFile&quot;, &quot;r&quot;)
+inp = inpFile.read()
+# wenn man mit der Datei fertig ist, zumachen!
+inpFile.close()
+
+
+# Ausgabe in eine Datei schreiben
+outFile = open(&quot;myFile&quot;, &quot;w&quot;)
+outFile.write(&quot;This is an owesome line I&#39;m inserting in this file!\n&quot;)
+# und wieder schließen
+outFile.close()
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-55" style="background:;">
+  <hgroup>
+    <h2>with-statement</h2>
+  </hgroup>
+  <article>
+    <p>Schließe eine Datei auf jeden Fall.</p>
+
+<pre><code class="python">    with open(&quot;example.py&quot;) as file:
+        data = file.read()
+        print(data)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-56" style="background:;">
+  <hgroup>
+    <h2>Aufgabe</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Eine Datei einlesen, z.B. den Code eures Programms</li>
+<li>Inhalt der Datei in eine andere Datei schreiben</li>
+<li>also known as <code>cp</code></li>
+<li>(Übergebe die Dateinamen als Prozess-Parameter (sys.argv))</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-57" style="background:;">
+  <hgroup>
+    <h2>Aufgabe2</h2>
+  </hgroup>
+  <article>
+    <ol>
+<li>Schreibe in eine Datei deinen Namen, dein Geburtsdatum, deine Schuhgröße,
+deine Lieblingsfarbe, ob du Katzen magst und die ersten 2 Zeilen von deinem
+Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster</li>
+</ol>
+
+<pre><code>    Schuhgröße: 42
+    Ich mag schwarze Katzen.
+    ...
+</code></pre>
+
+<ol>
+<li>Mach die Datei zu.</li>
+<li>Öffne die Datei erneut, diesmal in Lesemodus.</li>
+<li>Lese die Datei Zeile für Zeile aus (Doku angucken ;))</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-58" style="background:;">
+  <hgroup>
+    <h2>Telefonbuch-Projekt</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-59" style="background:;">
+  <hgroup>
+    <h2>Klassen Definition</h2>
+  </hgroup>
+  <article>
+    <pre><code>class Dog(object):
+    legs = 4
+    barks = True
+
+    def __init__(self, name, owner):
+        self.name = name
+        self.owner = owner
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-60" style="background:;">
+  <hgroup>
+    <h2>Objekte instanzieren</h2>
+  </hgroup>
+  <article>
+    <pre><code>sharo = Dog(&quot;sharo&quot;, &quot;philipp&quot;)
+egon = Dog(&quot;egon&quot;, &quot;lusy&quot;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-61" style="background:;">
+  <hgroup>
+    <h2>Vererbung</h2>
+  </hgroup>
+  <article>
+    <p>Hier ein sinnfreies Beispiel:</p>
+
+<pre><code>class Animal(object):
+    hearts = 1
+    legs = 0
+    favorite_food = &quot;&quot;
+
+class Dog(Animal):
+    legs = 4
+    favorite_food = &quot;köfte&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-62" style="background:;">
+  <hgroup>
+    <h2>Vererbung</h2>
+  </hgroup>
+  <article>
+    <pre><code>class Human(Animal):
+    legs = 2
+    favorite_food = &quot;falafel&quot;
+    drinks_beer = True
+    hobbys = [&quot;plays the piano&quot;, &quot;plays chess&quot;]
+
+class Nerd(Human):
+    favorite_food = &quot;pizza&quot;
+    likes_computers = True
+    hobbys = [&quot;painting&quot;, &quot;ponnies&quot;]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-63" style="background:;">
+  <hgroup>
+    <h2>isinstance und type Funktion</h2>
+  </hgroup>
+  <article>
+    <p>Mit der <code>isinstance</code> kann man überprüfen, ob ein Objekt eine Instanz einer
+Klasse ist:</p>
+
+<pre><code>lusy = Human()
+isinstance(lusy, Human)
+</code></pre>
+
+<p>Mit der <code>type</code> Funktion können wir den Type eines Objekts erfragen.</p>
+
+<pre><code>type(lusy)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-64" style="background:;">
+  <hgroup>
+    <h2>Main-Funktion (Programm Parameter)</h2>
+  </hgroup>
+  <article>
+    <pre><code>if __name__ == &#39;__main__&#39;:
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-65" style="background:;">
+  <hgroup>
+    <h2>Anonyme Funktionen</h2>
+  </hgroup>
+  <article>
+    <pre><code>#vlt zu hardcore?
+lambda x: x**2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-66" style="background:;">
+  <hgroup>
+    <h2><a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions">List comprehensions</a></h2>
+  </hgroup>
+  <article>
+    <pre><code>squares = [x**2 for x in range(10)]
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-67" style="background:;">
+  <hgroup>
+    <h2>Funktionale Programmierung in Python</h2>
+  </hgroup>
+  <article>
+    <pre><code>map(lambda x: x**2, range(10))
+filter(lambda x: x % 2 == 0, range(10))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-68" style="background:;">
+  <hgroup>
+    <h2>Python-Tools</h2>
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-69" style="background:;">
+  <hgroup>
+    <h2>pip (python package index)</h2>
+  </hgroup>
+  <article>
+    <blockquote>
+<p>A tool for installing and managing Python packages</p>
+</blockquote>
+
+<p>Website: <a href="http://www.pip-installer.org/en/latest/">http://www.pip-installer.org/en/latest/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-70" style="background:;">
+  <hgroup>
+    <h2>virtualenv</h2>
+  </hgroup>
+  <article>
+    <blockquote>
+<p>Virtual Python Environment builder</p>
+</blockquote>
+
+<p>Website: <a href="https://pypi.python.org/pypi/virtualenv">https://pypi.python.org/pypi/virtualenv</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-71" style="background:;">
+  <hgroup>
+    <h2>ipython</h2>
+  </hgroup>
+  <article>
+    <blockquote>
+<p>a rich architecture for interactive computing</p>
+</blockquote>
+
+<p>Website: <a href="http://ipython.org">http://ipython.org</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-72" style="background:;">
+  <hgroup>
+    <h2>Peps</h2>
+  </hgroup>
+  <article>
+    <p>Python Enhancement Proposals</p>
+
+<p>Website: <a href="http://www.python.org/dev/peps/">http://www.python.org/dev/peps/</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
