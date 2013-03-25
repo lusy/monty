@@ -787,6 +787,7 @@ Klasse ist:
 ```python
     lusy = Human()
     isinstance(lusy, Human)
+    isinstance(lusy, Animal)
 ```
 
 Mit der `type` Funktion können wir den Type eines Objekts erfragen.
