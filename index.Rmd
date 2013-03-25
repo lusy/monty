@@ -848,3 +848,5 @@ Website: [http://ipython.org](http://ipython.org)
 Python Enhancement Proposals
 
 Website: [http://www.python.org/dev/peps/](http://www.python.org/dev/peps/)
+
+* [Style Guide for Python](http://www.python.org/dev/peps/pep-0008/)
