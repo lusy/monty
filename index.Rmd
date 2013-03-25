@@ -179,11 +179,6 @@ Was passiert wenn wir `5 + 3 / 2.0` eingeben?
 
 Was passiert hier: `4 / 2 / 2` ?
 
-Und hier `7 / 2` ?
-Was sollte man tun, um die Antwort `3.5` zu bekommen?
-
-Sinnvolle Aufgaben hier einfügen!
-
 ---
 
 ## Boolean
