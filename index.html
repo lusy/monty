@@ -230,7 +230,6 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li>boolean</li>
 <li>strings</li>
 <li>listen</li>
-<li>sets</li>
 <li>dictionaries</li>
 <li>tupel</li>
 </ul>
@@ -244,9 +243,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
     <h2>Variablen</h2>
   </hgroup>
   <article>
-    <p>Verweise auf Objekte, z.B. auf Zahlen:</p>
-
-<pre><code>x = 1
+    <pre><code>x = 1
 pi = 3.145
 y = pi
 </code></pre>
@@ -308,6 +305,8 @@ y = pi
 <p>Und hier <code>7 / 2</code> ?
 Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
 
+<p>Sinnvolle Aufgaben hier einfügen!</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -330,9 +329,9 @@ Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
     <h2>Boolean operators</h2>
   </hgroup>
   <article>
-    <pre><code class="python">    not False # bindet am stärksten
-    True and True # bindet am zweit stärksten
-    False or True # schwächster Operator
+    <pre><code class="python">    not False
+    True and True
+    False or True
 </code></pre>
 
   </article>
@@ -344,7 +343,7 @@ Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
     <h2>Aufgabe</h2>
   </hgroup>
   <article>
-    <p>Zu was werden die folgenden Ausdrück ausgewertet:</p>
+    <p>Zu was wird der folgenden Ausdruck ausgewertet:</p>
 
 <pre><code class="python">    False or True and False
     True and (True or False)
@@ -357,18 +356,6 @@ Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
 
       <slide class="" id="slide-18" style="background:;">
   <hgroup>
-    <h2>Boolische Ausdrücke (boolean expressions)</h2>
-  </hgroup>
-  <article>
-    <pre><code>    x &lt; y and y &lt;= z
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-19" style="background:;">
-  <hgroup>
     <h2>Strings</h2>
   </hgroup>
   <article>
@@ -379,15 +366,15 @@ blabla
 blup
 blip
 &quot;&quot;&quot;
-&quot;And I&#39;m saying \&quot;Hello!\&quot;&quot; # escaped string
-&quot;There you go!\n&quot; # string mit Zeilenumbruch
+&quot;And I&#39;m saying \&quot;Hello!\&quot;&quot;
+&quot;There you go!\n&quot;
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-20" style="background:;">
+      <slide class="" id="slide-19" style="background:;">
   <hgroup>
     <h2>String operators</h2>
   </hgroup>
@@ -397,29 +384,29 @@ blip
 &quot;Hello&quot;[-1]
 &quot;Hello&quot;[1:4]
 &quot;hello&quot;.upper()
-&quot;HeLLo&quot;.lower()
+&quot;hello&quot;.lower()
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-21" style="background:;">
+      <slide class="" id="slide-20" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
   <article>
-    <p>Erstelle einen String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.</p>
+    <p>Erstelle eine String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.</p>
 
 <p>Lass dir von dem String nur den Substring ausgeben, der deinen Vornamen enthält.</p>
 
-<p>Finde andere Funktionen, die man auf Strings anwenden kann (pydoc). Was Funktionen sind erklären wir später.</p>
+<p>Finde andere Funktionen, die man auf Strings anwenden kann. Was Funktionen sind erklären wir später.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-22" style="background:;">
+      <slide class="" id="slide-21" style="background:;">
   <hgroup>
     <h2>Listen</h2>
   </hgroup>
@@ -442,7 +429,7 @@ blip
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-23" style="background:;">
+      <slide class="" id="slide-22" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -466,26 +453,22 @@ Lösche Bert aus der Liste.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-24" style="background:;">
+      <slide class="" id="slide-23" style="background:;">
   <hgroup>
-    <h2>Mutable vs Immutable Objects</h2>
+    <h2>Mutable vs Immutable</h2>
   </hgroup>
   <article>
     <ul>
-<li>Primitive Datentypen sind unveränderbar (immutable):
-
-<ul>
-<li>int, bool, str, long, ...</li>
-<li>Sie können nachträglich nicht verändert werden</li>
-</ul></li>
-<li>Listen, Dictionaries, etc. sind veränderbar (mutable)</li>
+<li>primitive datatypes are immutable: int, bool, str, long,..
+Once created, contents cannot be updated.</li>
+<li>lists and dictionaries (following) are mutable!</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-25" style="background:;">
+      <slide class="" id="slide-24" style="background:;">
   <hgroup>
     <h2>Mutable vs Immutable 2</h2>
   </hgroup>
@@ -497,7 +480,7 @@ names2 = names
 names.append(&quot;Ingo&quot;)
 # names = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;]
 # names2 = [&quot;Egon&quot;, &quot;Bert&quot;, &quot;Hildegard&quot;, &quot;Dörte&quot;, &quot;Ingo&quot;]
-# names und names2 sind zwei &quot;Labels&quot; für die selbe Liste
+# names and names2 are two &quot;labels&quot; for the same list
 </code></pre>
 
 <p>vs</p>
@@ -512,7 +495,7 @@ names.append(&quot;Ingo&quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-26" style="background:;">
+      <slide class="" id="slide-25" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -527,12 +510,12 @@ Was wäre eine geeignete Datenstruktur hierfür? Schau in der Dokumentation nach
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-27" style="background:;">
+      <slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Dictionaries (Wörterbücher)</h2>
   </hgroup>
   <article>
-    <pre><code>{} # leeres Wörterbuch
+    <pre><code>{}
 d = { &quot;Lusy&quot;: &quot;toll&quot;, &quot;Philipp&quot;: &quot;lol&quot; }
 # Wie greife ich auf die Werte zu
 d[&quot;Lusy&quot;]
@@ -553,7 +536,7 @@ del d[&quot;Lusy&quot;]
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-28" style="background:;">
+      <slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -562,15 +545,14 @@ del d[&quot;Lusy&quot;]
 </code></pre>
 
 <p>Erweitere das Dictionary <code>telefonbuch</code>, so dass es die Telefonnummern von 3 weiteren Menschen
-enthält (also, du kannst die Namen als Keys verwenden).</p>
-
-<p>Schaue die Nummer von Egon in <code>telefonbuch</code> nach und speichere sie in der Variable <code>egon</code>.</p>
+enthält (also, du kannst die Namen als Keys verwenden).
+Schaue die Nummer von Egon in <code>telefonbuch</code> nach und speichere sie in der Variable <code>egon</code>.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-29" style="background:;">
+      <slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Tupel</h2>
   </hgroup>
@@ -585,14 +567,14 @@ b.append(&quot;la&quot;) # geht nicht
 b[0]
 
 # man braucht die Klammern nicht unbedingt
-c = &quot;Berndt&quot;, &quot;Dörte&quot;
+c = &quot;Egon&quot;, &quot;Berndt&quot;, &quot;Dörte&quot;
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-30" style="background:;">
+      <slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -606,32 +588,31 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-31" style="background:;">
+      <slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>Casting</h2>
   </hgroup>
   <article>
     <p>Es ist möglich Typen zu konvertieren:</p>
 
-<pre><code class="python">    int(3.145)
-    float(23)
-    int(&quot;42&quot;)
-    list((1, 2))
-    tuple([1,2,3])
+<pre><code>int(3.145)
+float(23)
+list((1, 2))
+tuple([1,2,3])
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-32" style="background:;">
+      <slide class="" id="slide-31" style="background:;">
   <hgroup>
     <h2>Funktionen</h2>
   </hgroup>
   <article>
     <ul>
 <li>generalized Behaviour vs. specialized Behaviour</li>
-<li>wiederverwendbar</li>
+<li>reusable</li>
 <li>können Ergebnis zurückliefern</li>
 <li>die Einrückung ist wichtig!</li>
 </ul>
@@ -644,7 +625,7 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-33" style="background:;">
+      <slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Funktionen mit Parametern</h2>
   </hgroup>
@@ -657,7 +638,7 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-34" style="background:;">
+      <slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>Funktionen mit Default-Parametern</h2>
   </hgroup>
@@ -675,7 +656,7 @@ my_function(b = 4)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-35" style="background:;">
+      <slide class="" id="slide-34" style="background:;">
   <hgroup>
     <h2>Funktionen mit return-Value</h2>
   </hgroup>
@@ -693,7 +674,7 @@ def nothing():
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-36" style="background:;">
+      <slide class="" id="slide-35" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -707,20 +688,19 @@ Welche Werte müssen hier als Parameter übergeben werden?</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-37" style="background:;">
+      <slide class="" id="slide-36" style="background:;">
   <hgroup>
     <h2>Aufgabe2</h2>
   </hgroup>
   <article>
-    <p>Definiere eine Funktion, die mindesten einen Standardparameter und mindesten
-einen Named Argument mit einem Defaultwert hat.
+    <p>Definiere eine Funktion, die mindesten einen Standardparameter und mindesten einen Named Argument mit einem Defaultwert.
 Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-38" style="background:;">
+      <slide class="" id="slide-37" style="background:;">
   <hgroup>
     <h2>Objekte und Funktionen</h2>
   </hgroup>
@@ -735,7 +715,7 @@ einen Named Argument mit einem Defaultwert hat.
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-39" style="background:;">
+      <slide class="" id="slide-38" style="background:;">
   <hgroup>
     <h2>Beispiele für vordefinierte Funktionen</h2>
   </hgroup>
@@ -750,7 +730,7 @@ print()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-40" style="background:;">
+      <slide class="" id="slide-39" style="background:;">
   <hgroup>
     <h2>Kontrollfluß</h2>
   </hgroup>
@@ -760,7 +740,7 @@ print()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-41" style="background:;">
+      <slide class="" id="slide-40" style="background:;">
   <hgroup>
     <h2>if</h2>
   </hgroup>
@@ -773,7 +753,7 @@ print()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-42" style="background:;">
+      <slide class="" id="slide-41" style="background:;">
   <hgroup>
     <h2>if-else</h2>
   </hgroup>
@@ -788,7 +768,7 @@ else:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-43" style="background:;">
+      <slide class="" id="slide-42" style="background:;">
   <hgroup>
     <h2>if-elif-else</h2>
   </hgroup>
@@ -805,7 +785,7 @@ else:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-44" style="background:;">
+      <slide class="" id="slide-43" style="background:;">
   <hgroup>
     <h2>While-Schleife</h2>
   </hgroup>
@@ -818,7 +798,7 @@ else:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-45" style="background:;">
+      <slide class="" id="slide-44" style="background:;">
   <hgroup>
     <h2>For-Schleife</h2>
   </hgroup>
@@ -832,7 +812,7 @@ for w in words:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-46" style="background:;">
+      <slide class="" id="slide-45" style="background:;">
   <hgroup>
     <h2>Break/Continue</h2>
   </hgroup>
@@ -840,25 +820,25 @@ for w in words:
     <pre><code class="python">    # break - breaks out of the smallest enclosing for or while loop
     var = 10
     while var &gt; 0:
-        print(&#39;Current variable value :&#39;, var)
+        print &#39;Current variable value :&#39;, var
         var = var -1
         if var == 5:
             break
 
-    print(&quot;Good bye!&quot;)
+    print &quot;Good bye!&quot;
 
     # continue - continues with the execution of the next iteration of the loop
     for letter in &#39;Python&#39;:
         if letter == &#39;h&#39;:
             continue
-        print(&#39;Current Letter :&#39;, letter)
+        print &#39;Current Letter :&#39;, letter
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-47" style="background:;">
+      <slide class="" id="slide-46" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -869,7 +849,7 @@ for w in words:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-48" style="background:;">
+      <slide class="" id="slide-47" style="background:;">
   <hgroup>
     <h2>Try/Except</h2>
   </hgroup>
@@ -889,7 +869,7 @@ except Exception, e:
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-49" style="background:;">
+      <slide class="" id="slide-48" style="background:;">
   <hgroup>
     <h2>Module</h2>
   </hgroup>
@@ -909,7 +889,7 @@ from sys import stdout as log
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-50" style="background:;">
+      <slide class="" id="slide-49" style="background:;">
   <hgroup>
     <h2>Aufgabe zu Modulen</h2>
   </hgroup>
@@ -925,7 +905,7 @@ und Methoden zu finden.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-51" style="background:;">
+      <slide class="" id="slide-50" style="background:;">
   <hgroup>
     <h2>Eingabe / Ausgabe</h2>
   </hgroup>
@@ -939,7 +919,7 @@ print(&quot;So, your name is %s&quot; % name)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-52" style="background:;">
+      <slide class="" id="slide-51" style="background:;">
   <hgroup>
     <h2>String Formating</h2>
   </hgroup>
@@ -954,9 +934,9 @@ print(&quot;So, your name is %s&quot; % name)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-53" style="background:;">
+      <slide class="" id="slide-52" style="background:;">
   <hgroup>
-    <h2>stdin/stdout/stderr</h2>
+    <h2>sdtin/sdtout/stderr</h2>
   </hgroup>
   <article>
     <pre><code>import sys
@@ -970,7 +950,7 @@ sys.stdin.read()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-54" style="background:;">
+      <slide class="" id="slide-53" style="background:;">
   <hgroup>
     <h2>Dateien einlesen und schreiben</h2>
   </hgroup>
@@ -993,14 +973,12 @@ outFile.close()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-55" style="background:;">
+      <slide class="" id="slide-54" style="background:;">
   <hgroup>
     <h2>with-statement</h2>
   </hgroup>
   <article>
-    <p>Schließe eine Datei auf jeden Fall.</p>
-
-<pre><code class="python">    with open(&quot;example.py&quot;) as file:
+    <pre><code class="python">    with open(&quot;example.py&quot;) as file:
         data = file.read()
         print(data)
 </code></pre>
@@ -1009,7 +987,7 @@ outFile.close()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-56" style="background:;">
+      <slide class="" id="slide-55" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -1017,15 +995,15 @@ outFile.close()
     <ol>
 <li>Eine Datei einlesen, z.B. den Code eures Programms</li>
 <li>Inhalt der Datei in eine andere Datei schreiben</li>
-<li>also known as <code>cp</code></li>
-<li>(Übergebe die Dateinamen als Prozess-Parameter (sys.argv))</li>
+<li>also known as <code>cp</code>
+4.</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-57" style="background:;">
+      <slide class="" id="slide-56" style="background:;">
   <hgroup>
     <h2>Aufgabe2</h2>
   </hgroup>
@@ -1051,48 +1029,31 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster</l
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-58" style="background:;">
-  <hgroup>
-    <h2>Telefonbuch-Projekt</h2>
-  </hgroup>
-  <article>
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-59" style="background:;">
+      <slide class="" id="slide-57" style="background:;">
   <hgroup>
     <h2>Klassen Definition</h2>
   </hgroup>
   <article>
-    <pre><code>class Dog(object):
-    legs = 4
-    barks = True
+    <pre><code class="python">    class Dog(object):
+        legs = 4
+        barks = True
 
-    def __init__(self, name, owner):
-        self.name = name
-        self.owner = owner
+        def __init__(self, name, owner):
+            self.name = name
+            self.owner = owner
+</code></pre>
+
+<h2>Objekte instanzieren</h2>
+
+<pre><code class="python">    sharo = Dog(&quot;sharo&quot;, &quot;philipp&quot;)
+    egon = Dog(&quot;egon&quot;, &quot;lusy&quot;)
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-60" style="background:;">
-  <hgroup>
-    <h2>Objekte instanzieren</h2>
-  </hgroup>
-  <article>
-    <pre><code>sharo = Dog(&quot;sharo&quot;, &quot;philipp&quot;)
-egon = Dog(&quot;egon&quot;, &quot;lusy&quot;)
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-61" style="background:;">
+      <slide class="" id="slide-58" style="background:;">
   <hgroup>
     <h2>Vererbung</h2>
   </hgroup>
@@ -1113,7 +1074,7 @@ class Dog(Animal):
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-62" style="background:;">
+      <slide class="" id="slide-59" style="background:;">
   <hgroup>
     <h2>Vererbung</h2>
   </hgroup>
@@ -1134,7 +1095,7 @@ class Nerd(Human):
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-63" style="background:;">
+      <slide class="" id="slide-60" style="background:;">
   <hgroup>
     <h2>isinstance und type Funktion</h2>
   </hgroup>
@@ -1142,20 +1103,20 @@ class Nerd(Human):
     <p>Mit der <code>isinstance</code> kann man überprüfen, ob ein Objekt eine Instanz einer
 Klasse ist:</p>
 
-<pre><code>lusy = Human()
-isinstance(lusy, Human)
+<pre><code class="python">    lusy = Human()
+    isinstance(lusy, Human)
 </code></pre>
 
 <p>Mit der <code>type</code> Funktion können wir den Type eines Objekts erfragen.</p>
 
-<pre><code>type(lusy)
+<pre><code class="python">    type(lusy)
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-64" style="background:;">
+      <slide class="" id="slide-61" style="background:;">
   <hgroup>
     <h2>Main-Funktion (Programm Parameter)</h2>
   </hgroup>
@@ -1167,20 +1128,19 @@ isinstance(lusy, Human)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-65" style="background:;">
+      <slide class="" id="slide-62" style="background:;">
   <hgroup>
     <h2>Anonyme Funktionen</h2>
   </hgroup>
   <article>
-    <pre><code>#vlt zu hardcore?
-lambda x: x**2
+    <pre><code>lambda x: x**2
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-66" style="background:;">
+      <slide class="" id="slide-63" style="background:;">
   <hgroup>
     <h2><a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions">List comprehensions</a></h2>
   </hgroup>
@@ -1192,7 +1152,7 @@ lambda x: x**2
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-67" style="background:;">
+      <slide class="" id="slide-64" style="background:;">
   <hgroup>
     <h2>Funktionale Programmierung in Python</h2>
   </hgroup>
@@ -1205,7 +1165,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-68" style="background:;">
+      <slide class="" id="slide-65" style="background:;">
   <hgroup>
     <h2>Python-Tools</h2>
   </hgroup>
@@ -1215,7 +1175,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-69" style="background:;">
+      <slide class="" id="slide-66" style="background:;">
   <hgroup>
     <h2>pip (python package index)</h2>
   </hgroup>
@@ -1230,7 +1190,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-70" style="background:;">
+      <slide class="" id="slide-67" style="background:;">
   <hgroup>
     <h2>virtualenv</h2>
   </hgroup>
@@ -1245,7 +1205,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-71" style="background:;">
+      <slide class="" id="slide-68" style="background:;">
   <hgroup>
     <h2>ipython</h2>
   </hgroup>
@@ -1260,7 +1220,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-72" style="background:;">
+      <slide class="" id="slide-69" style="background:;">
   <hgroup>
     <h2>Peps</h2>
   </hgroup>
