@@ -569,7 +569,7 @@ Wann braucht man die überhaupt?
 
     try:
         bad_function()
-    except Exception, e:
+    except Exception as e:
         print("catched: " +  e)
 
 ---
