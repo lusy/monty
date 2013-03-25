@@ -1,0 +1,29 @@
+class Menge(...):
+    """..."""
+
+    def __init__(self, *args):
+        self.data = ...
+
+    def __add__(self, sed):
+        result = ...
+        for element in sed.data:
+            if element not in result:
+                ...
+        ...
+    def __sub__(...):
+        ...
+
+    def __or__(...):
+        ...
+
+    def __repr__(...):
+        return ...
+
+if __name__ == '__main__':
+    m0 = ...
+    m1 = ...
+    print(m0)
+    print(m1)
+    print(m0 + m1)
+    print(m0 - m1)
+    print(m0 or m1)
