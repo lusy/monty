@@ -297,10 +297,10 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ## Mutable vs Immutable Objects
 
-* Primitive Datentypen sind unveränderbar (immutable):
-    * int, bool, str, long, ...
-    * Sie können nachträglich nicht verändert werden
-* Listen, Dictionaries, etc. sind veränderbar (mutable)
+* Manche Objekte in python sind unveränderbar (immutable), z.B.:
+    * int, bool, str, tuple, ...
+* Andere Objekte sind veränderbar (mutable):
+    * list, dict, ...
 
 ---
 
