@@ -520,7 +520,7 @@ einen Named Argument mit einem Defaultwert hat.
 
 ## While-Schleife
 
-    while(True):
+    while True:
         print("endless")
 
 ---
