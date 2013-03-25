@@ -850,3 +850,4 @@ Python Enhancement Proposals
 Website: [http://www.python.org/dev/peps/](http://www.python.org/dev/peps/)
 
 * [Style Guide for Python](http://www.python.org/dev/peps/pep-0008/)
+* [Docstring](http://www.python.org/dev/peps/pep-0257/)
