@@ -581,7 +581,7 @@ Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügun
 
     import datetime
     from datetime import datetime
-    from datetime import *
+    from datetime import * # Achtung
     from sys import stdout as log
 
 Jede Python-Datei ist auch ein Modul.
