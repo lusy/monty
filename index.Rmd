@@ -608,6 +608,18 @@ Programm Parameter
 
 ---
 
+## imp-Module
+
+Das **imp**-Module kann im Python-Interpreter nützlich sein um bereits geladene
+Module neuzuladen:
+
+```python
+    from imp import reload
+    import foobar
+    reload(foobar)
+```
+
+---
 
 ## Aufgabe zu Modulen
 
