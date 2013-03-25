@@ -22,13 +22,6 @@ Schließt ab mit einem Mini-Projekt
 
 Größeres Projekt aka Riesen-Projekt
 
-Mögliche Projekte:
-
-* Punkt/Linie/Bla/Geometriekramm
-* sinnloses Textadventure
-* Lexer/Compiler
-* grep
-
 ---
 
 ## python
