@@ -669,13 +669,16 @@ und Methoden zu finden.
 
 ## with-statement
 
-Schließe eine Datei auf jeden Fall.
+**with** definiert einen Kontextmanager, so dass der Code im **with** nur dann
+ausgeführt wird, wenn der Kontext erstellt werden kann.
 
 ```python
     with open("example.py") as file:
-        data = file.read()
-        print(data)
+        for line in file:
+            print(line[:-1])
 ```
+
+Hier ist der Kontext die Datei, die wir öffnen wollen.
 
 ---
 
