@@ -593,6 +593,27 @@ Jede Python-Datei ist auch ein Modul.
 
 ---
 
+## Module-Name (Programm Parameter)
+
+```python
+    if __name__ == '__main__':
+        print('Ich bin der Hauptprozess. Niemand hat mich importiert.')
+    else:
+        print('Ein anderes Programm benutzt (import) mich.')
+```
+
+Programm Parameter
+
+```python
+    import sys
+    if __name__ == '__main__':
+        print(sys.argv)
+
+```
+
+---
+
+
 ## Aufgabe zu Modulen
 
 Nutze das datetime Modul um das aktuelle Datum zu erfragen. Berechne die
@@ -761,12 +782,6 @@ Mit der `type` Funktion können wir den Type eines Objekts erfragen.
 ```python
     type(lusy)
 ```
-
----
-
-## Main-Funktion (Programm Parameter)
-
-    if __name__ == '__main__':
 
 ---
 
