@@ -22,13 +22,6 @@ Schließt ab mit einem Mini-Projekt
 
 Größeres Projekt aka Riesen-Projekt
 
-Mögliche Projekte:
-
-* Punkt/Linie/Bla/Geometriekramm
-* sinnloses Textadventure
-* Lexer/Compiler
-* grep
-
 ---
 
 ## python
@@ -139,12 +132,15 @@ In python is alles ein Objekt. Es gibt verschiedene Typen von Objekten:
 * boolean
 * strings
 * listen
+* sets
 * dictionaries
 * tupel
 
 ---
 
 ## Variablen
+
+Verweise auf Objekte, z.B. auf Zahlen:
 
     x = 1
     pi = 3.145
@@ -202,21 +198,29 @@ Sinnvolle Aufgaben hier einfügen!
 ## Boolean operators
 
 ```python
-    not False
-    True and True
-    False or True
+    not False # bindet am stärksten
+    True and True # bindet am zweit stärksten
+    False or True # schwächster Operator
 ```
 
 ---
 
 ## Aufgabe
 
-Zu was wird der folgenden Ausdruck ausgewertet:
+Zu was wird der folgende Ausdruck ausgewertet:
 
 ```python
     False or True and False
     True and (True or False)
     False or True and not False
+```
+
+---
+
+## Boolische Ausdrücke (boolean expressions)
+
+```python
+    x < y and y <= z
 ```
 
 ---
@@ -230,8 +234,8 @@ Zu was wird der folgenden Ausdruck ausgewertet:
     blup
     blip
     """
-    "And I'm saying \"Hello!\""
-    "There you go!\n"
+    "And I'm saying \"Hello!\"" # escaped string
+    "There you go!\n" # string mit Zeilenumbruch
 
 ---
 
@@ -242,17 +246,17 @@ Zu was wird der folgenden Ausdruck ausgewertet:
     "Hello"[-1]
     "Hello"[1:4]
     "hello".upper()
-    "hello".lower()
+    "HeLLo".lower()
 
 ---
 
 ## Aufgabe
 
-Erstelle eine String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.
+Erstelle einen String mit deinem Namen und lass ihn in Großbuchstaben erscheinen.
 
 Lass dir von dem String nur den Substring ausgeben, der deinen Vornamen enthält.
 
-Finde andere Funktionen, die man auf Strings anwenden kann. Was Funktionen sind erklären wir später.
+Finde andere Funktionen, die man auf Strings anwenden kann (pydoc). Was Funktionen sind erklären wir später.
 
 ---
 
@@ -295,11 +299,12 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ---
 
-## Mutable vs Immutable
+## Mutable vs Immutable Objects
 
-* primitive datatypes are immutable: int, bool, str, long,..
-Once created, contents cannot be updated.
-* lists and dictionaries (following) are mutable!
+* Primitive Datentypen sind unveränderbar (immutable):
+    * int, bool, str, long, ...
+    * Sie können nachträglich nicht verändert werden
+* Listen, Dictionaries, etc. sind veränderbar (mutable)
 
 ---
 
@@ -312,7 +317,7 @@ Vergleich:
     names.append("Ingo")
     # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
     # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # names and names2 are two "labels" for the same list
+    # names und names2 sind zwei "Labels" für die selbe Liste
 
 vs
 
@@ -335,7 +340,7 @@ Was wäre eine geeignete Datenstruktur hierfür? Schau in der Dokumentation nach
 
 ## Dictionaries (Wörterbücher)
 
-    {}
+    {} # leeres Wörterbuch
     d = { "Lusy": "toll", "Philipp": "lol" }
     # Wie greife ich auf die Werte zu
     d["Lusy"]
@@ -361,6 +366,7 @@ Was wäre eine geeignete Datenstruktur hierfür? Schau in der Dokumentation nach
 
 Erweitere das Dictionary `telefonbuch`, so dass es die Telefonnummern von 3 weiteren Menschen
 enthält (also, du kannst die Namen als Keys verwenden).
+
 Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variable `egon`.
 
 ---
@@ -376,7 +382,7 @@ Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variab
     b[0]
 
     # man braucht die Klammern nicht unbedingt
-    c = "Egon", "Berndt", "Dörte"
+    c = "Berndt", "Dörte"
 
 ---
 
@@ -393,17 +399,20 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 Es ist möglich Typen zu konvertieren:
 
+```python
     int(3.145)
     float(23)
+    int("42")
     list((1, 2))
     tuple([1,2,3])
+```
 
 ---
 
 ## Funktionen
 
 * generalized Behaviour vs. specialized Behaviour
-* reusable
+* wiederverwendbar
 * können Ergebnis zurückliefern
 * die Einrückung ist wichtig!
 
@@ -456,7 +465,8 @@ Welche Werte müssen hier als Parameter übergeben werden?
 
 ## Aufgabe2
 
-Definiere eine Funktion, die mindesten einen Standardparameter und mindesten einen Named Argument mit einem Defaultwert.
+Definiere eine Funktion, die mindesten einen Standardparameter und mindesten
+einen Named Argument mit einem Defaultwert hat.
 Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.
 
 ---
@@ -533,18 +543,18 @@ Definiere eine Funktion, die mindesten einen Standardparameter und mindesten ein
     # break - breaks out of the smallest enclosing for or while loop
     var = 10
     while var > 0:
-        print 'Current variable value :', var
+        print('Current variable value :', var)
         var = var -1
         if var == 5:
             break
 
-    print "Good bye!"
+    print("Good bye!")
 
     # continue - continues with the execution of the next iteration of the loop
     for letter in 'Python':
         if letter == 'h':
             continue
-        print 'Current Letter :', letter
+        print('Current Letter :', letter)
 ```
 
 ---
@@ -614,7 +624,7 @@ und Methoden zu finden.
 
 ---
 
-## sdtin/sdtout/stderr
+## stdin/stdout/stderr
 
     import sys
     sys.stdout.write("fooo\n")
@@ -643,6 +653,8 @@ und Methoden zu finden.
 
 ## with-statement
 
+Schließe eine Datei auf jeden Fall.
+
 ```python
     with open("example.py") as file:
         data = file.read()
@@ -656,7 +668,7 @@ und Methoden zu finden.
 1. Eine Datei einlesen, z.B. den Code eures Programms
 2. Inhalt der Datei in eine andere Datei schreiben
 3. also known as `cp`
-4.
+4. (Übergebe die Dateinamen als Prozess-Parameter (sys.argv))
 
 ---
 
@@ -676,6 +688,10 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 3. Öffne die Datei erneut, diesmal in Lesemodus.
 4. Lese die Datei Zeile für Zeile aus (Doku angucken ;))
 
+
+---
+
+## Telefonbuch-Projekt
 
 ---
 
