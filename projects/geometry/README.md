@@ -4,7 +4,7 @@
 
 Wir wollen unser Wissen über Klassen in Python anwenden um Geometrische
 Objekte abzubilden und zu zeichnen. In der Datei **geometry.py** befindet sich
-ein Grundgerüst mit dem ihr arbeiten könnt.
+ein Grundgerüst, mit dem ihr arbeiten könnt.
 
 ## Implementierung
 
@@ -32,11 +32,11 @@ Die Line-Klasse soll wie folgt instanziert werden können:
 
 1. Verändere die Größe des Fensters
     1. Bonuspunkte, wenn man dem Programm die Größe als Paramater übergeben kann
-2. Wir möchten Linien gerne standarmäßig pink rendern und Punkte blau
+2. Wir möchten Linien gerne standardmäßig pink rendern und Punkte blau
 3. Füge andere geometrische Objekte hinzu, z.B. Linienzüge, Rechtecke
 
 ## Implementierung (Bonus)
 
-Implementiere eine *intersetcs* Funktion, die überprüft, ob sich die
+Implementiere eine *intersects* Funktion, die überprüft, ob sich die
 geometrischen Objekte schneiden. Nutze die unter anderem die `isinstance`
-Funktion umzu überprüfen mit welchem geometrischen Objekt du arbeitest.
+Funktion um zu überprüfen mit welchem geometrischen Objekt du arbeitest.
