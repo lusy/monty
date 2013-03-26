@@ -638,7 +638,7 @@ und Methoden zu finden.
 
     name = input("Tell me your name")
     print(name)
-    print("So, your name is %s" % name)
+    print("So, your name is {}".format(name))
 
 ---
 
@@ -648,7 +648,7 @@ und Methoden zu finden.
     name = "Egon"
     age = 142
     likes = "cat babies"
-    print ("Hi! My name is %s, I'm %d years old and I like %s." % (name, age, likes))
+    print ("Hi! My name is {0}, I'm {1!s} years old and I like {2}.".format(name, age, likes))
 ```
 
 ---
