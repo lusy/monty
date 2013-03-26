@@ -24,6 +24,14 @@ Größeres Projekt aka Riesen-Projekt
 
 ---
 
+## Fragen (Pad)
+
+Es gibt ein Pad für Fragen, Anmerkungen und Live-Dokumentation:
+
+[http://pad.spline.de/python3](http://pad.spline.de/python3)
+
+---
+
 ## python
 
 ### Was ist Python?
@@ -57,6 +65,12 @@ Für Windows:
 
 Sollte das unmöglich sein:
 [http://www.python.org/getit/](http://www.python.org/getit/)
+
+---
+
+## Python 2 vs. Pyhton 3
+
+Wir nutzen python 3!
 
 ---
 
