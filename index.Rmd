@@ -761,9 +761,6 @@ Hier ein sinnfreies Beispiel:
         def get_hearts(self):
             return self.hearts
 
-        def get_legs(self):
-            return self.legs
-
         def get_favorite_food(self):
             return self.favorite_food
 
