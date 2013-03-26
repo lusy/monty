@@ -475,9 +475,10 @@ Welche Werte müssen hier als Parameter übergeben werden?
 
 ## Aufgabe2
 
-Definiere eine Funktion, die mindesten einen Standardparameter und mindesten
-einen Named Argument mit einem Defaultwert hat.
-Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.
+Definiere eine neue Funktion, die die Fläche eines Kreises berechnet und zurückgibt.
+Übergebe diesmal nicht nur den Radius des Kreises als Parameter, sondern auch
+pi=3.14 als Named Argument.
+Welche Vorteile hat die Benutzung eines Named Arguments hier?
 
 ---
 
