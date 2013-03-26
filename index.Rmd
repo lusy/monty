@@ -24,6 +24,14 @@ Größeres Projekt aka Riesen-Projekt
 
 ---
 
+## Fragen (Pad)
+
+Es gibt ein Pad für Fragen, Anmerkungen und Live-Dokumentation:
+
+[http://pad.spline.de/python3](http://pad.spline.de/python3)
+
+---
+
 ## python
 
 ### Was ist Python?
