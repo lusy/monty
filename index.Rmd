@@ -60,6 +60,12 @@ Sollte das unmöglich sein:
 
 ---
 
+## Python 2 vs. Pyhton 3
+
+Wir nutzen python 3!
+
+---
+
 ## Erste Schritte
 ### Python Interpreter
 
