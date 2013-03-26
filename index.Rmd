@@ -101,7 +101,6 @@ Gibt es auch in bunt:
 Wo finde ich Dokumentation?
 
 * pydoc
-* in der Python-Shell: `help(int)`
 * official documentation http://docs.python.org/3/
 * tutorial: http://docs.python.org/3/tutorial/index.html
 * lib ref: http://docs.python.org/3/library/index.html

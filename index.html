@@ -180,7 +180,6 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
 <ul>
 <li>pydoc</li>
-<li>in der Python-Shell: <code>help(int)</code></li>
 <li>official documentation <a href="http://docs.python.org/3/">http://docs.python.org/3/</a></li>
 <li>tutorial: <a href="http://docs.python.org/3/tutorial/index.html">http://docs.python.org/3/tutorial/index.html</a></li>
 <li>lib ref: <a href="http://docs.python.org/3/library/index.html">http://docs.python.org/3/library/index.html</a></li>
@@ -297,6 +296,11 @@ y = pi
 
 <p>Was passiert hier: <code>4 / 2 / 2</code> ?</p>
 
+<p>Und hier <code>7 / 2</code> ?
+Was sollte man tun, um die Antwort <code>3.5</code> zu bekommen?</p>
+
+<p>Sinnvolle Aufgaben hier einfügen!</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -350,7 +354,6 @@ y = pi
   </hgroup>
   <article>
     <pre><code class="python">    x &lt; y and y &lt;= z
-    x &lt; y &lt;= z # Verkettung von Vergleichsoperatoren
 </code></pre>
 
   </article>
@@ -462,16 +465,13 @@ Lösche Bert aus der Liste.</p>
   </hgroup>
   <article>
     <ul>
-<li>Manche Objekte in python sind unveränderbar (immutable), z.B.:
+<li>Primitive Datentypen sind unveränderbar (immutable):
 
 <ul>
-<li>int, bool, str, tuple, ...</li>
+<li>int, bool, str, long, ...</li>
+<li>Sie können nachträglich nicht verändert werden</li>
 </ul></li>
-<li>Andere Objekte sind veränderbar (mutable):
-
-<ul>
-<li>list, dict, ...</li>
-</ul></li>
+<li>Listen, Dictionaries, etc. sind veränderbar (mutable)</li>
 </ul>
 
   </article>
@@ -803,7 +803,7 @@ else:
     <h2>While-Schleife</h2>
   </hgroup>
   <article>
-    <pre><code>while True:
+    <pre><code>while(True):
     print(&quot;endless&quot;)
 </code></pre>
 
@@ -874,7 +874,7 @@ for w in words:
 
 try:
     bad_function()
-except Exception as e:
+except Exception, e:
     print(&quot;catched: &quot; +  e)
 </code></pre>
 
@@ -892,7 +892,7 @@ Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügun
 
 <pre><code>import datetime
 from datetime import datetime
-from datetime import * # Achtung
+from datetime import *
 from sys import stdout as log
 </code></pre>
 
@@ -903,46 +903,6 @@ from sys import stdout as log
 </slide>
 
       <slide class="" id="slide-50" style="background:;">
-  <hgroup>
-    <h2>Module-Name (Programm Parameter)</h2>
-  </hgroup>
-  <article>
-    <pre><code class="python">    if __name__ == &#39;__main__&#39;:
-        print(&#39;Ich bin der Hauptprozess. Niemand hat mich importiert.&#39;)
-    else:
-        print(&#39;Ein anderes Programm benutzt (import) mich.&#39;)
-</code></pre>
-
-<p>Programm Parameter</p>
-
-<pre><code class="python">    import sys
-    if __name__ == &#39;__main__&#39;:
-        print(sys.argv)
-
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-51" style="background:;">
-  <hgroup>
-    <h2>imp-Module</h2>
-  </hgroup>
-  <article>
-    <p>Das <strong>imp</strong>-Module kann im Python-Interpreter nützlich sein um bereits geladene
-Module neuzuladen:</p>
-
-<pre><code class="python">    from imp import reload
-    import foobar
-    reload(foobar)
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-      <slide class="" id="slide-52" style="background:;">
   <hgroup>
     <h2>Aufgabe zu Modulen</h2>
   </hgroup>
@@ -958,12 +918,12 @@ und Methoden zu finden.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-53" style="background:;">
+      <slide class="" id="slide-51" style="background:;">
   <hgroup>
     <h2>Eingabe / Ausgabe</h2>
   </hgroup>
   <article>
-    <pre><code>name = input(&quot;Tell me your name&quot;)
+    <pre><code>name = raw_input(&quot;Tell me your name&quot;)
 print(name)
 print(&quot;So, your name is %s&quot; % name)
 </code></pre>
@@ -972,7 +932,7 @@ print(&quot;So, your name is %s&quot; % name)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-54" style="background:;">
+      <slide class="" id="slide-52" style="background:;">
   <hgroup>
     <h2>String Formating</h2>
   </hgroup>
@@ -987,7 +947,7 @@ print(&quot;So, your name is %s&quot; % name)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-55" style="background:;">
+      <slide class="" id="slide-53" style="background:;">
   <hgroup>
     <h2>stdin/stdout/stderr</h2>
   </hgroup>
@@ -1003,7 +963,7 @@ sys.stdin.read()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-56" style="background:;">
+      <slide class="" id="slide-54" style="background:;">
   <hgroup>
     <h2>Dateien einlesen und schreiben</h2>
   </hgroup>
@@ -1026,26 +986,23 @@ outFile.close()
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-57" style="background:;">
+      <slide class="" id="slide-55" style="background:;">
   <hgroup>
     <h2>with-statement</h2>
   </hgroup>
   <article>
-    <p><strong>with</strong> definiert einen Kontextmanager, so dass der Code im <strong>with</strong> nur dann
-ausgeführt wird, wenn der Kontext erstellt werden kann.</p>
+    <p>Schließe eine Datei auf jeden Fall.</p>
 
 <pre><code class="python">    with open(&quot;example.py&quot;) as file:
-        for line in file:
-            print(line[:-1])
+        data = file.read()
+        print(data)
 </code></pre>
-
-<p>Hier ist der Kontext die Datei, die wir öffnen wollen.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-58" style="background:;">
+      <slide class="" id="slide-56" style="background:;">
   <hgroup>
     <h2>Aufgabe</h2>
   </hgroup>
@@ -1061,7 +1018,7 @@ ausgeführt wird, wenn der Kontext erstellt werden kann.</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-59" style="background:;">
+      <slide class="" id="slide-57" style="background:;">
   <hgroup>
     <h2>Aufgabe2</h2>
   </hgroup>
@@ -1087,7 +1044,7 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster</l
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-60" style="background:;">
+      <slide class="" id="slide-58" style="background:;">
   <hgroup>
     <h2>Telefonbuch-Projekt</h2>
   </hgroup>
@@ -1097,7 +1054,7 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster</l
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-61" style="background:;">
+      <slide class="" id="slide-59" style="background:;">
   <hgroup>
     <h2>Klassen Definition</h2>
   </hgroup>
@@ -1121,7 +1078,7 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster</l
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-62" style="background:;">
+      <slide class="" id="slide-60" style="background:;">
   <hgroup>
     <h2>Vererbung</h2>
   </hgroup>
@@ -1142,7 +1099,7 @@ class Dog(Animal):
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-63" style="background:;">
+      <slide class="" id="slide-61" style="background:;">
   <hgroup>
     <h2>Vererbung</h2>
   </hgroup>
@@ -1163,7 +1120,7 @@ class Nerd(Human):
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-64" style="background:;">
+      <slide class="" id="slide-62" style="background:;">
   <hgroup>
     <h2>isinstance und type Funktion</h2>
   </hgroup>
@@ -1185,7 +1142,19 @@ Klasse ist:</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-65" style="background:;">
+      <slide class="" id="slide-63" style="background:;">
+  <hgroup>
+    <h2>Main-Funktion (Programm Parameter)</h2>
+  </hgroup>
+  <article>
+    <pre><code>if __name__ == &#39;__main__&#39;:
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-64" style="background:;">
   <hgroup>
     <h2>Anonyme Funktionen</h2>
   </hgroup>
@@ -1197,7 +1166,7 @@ Klasse ist:</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-66" style="background:;">
+      <slide class="" id="slide-65" style="background:;">
   <hgroup>
     <h2><a href="http://docs.python.org/2/tutorial/datastructures.html#list-comprehensions">List comprehensions</a></h2>
   </hgroup>
@@ -1209,7 +1178,7 @@ Klasse ist:</p>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-67" style="background:;">
+      <slide class="" id="slide-66" style="background:;">
   <hgroup>
     <h2>Funktionale Programmierung in Python</h2>
   </hgroup>
@@ -1222,7 +1191,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-68" style="background:;">
+      <slide class="" id="slide-67" style="background:;">
   <hgroup>
     <h2>Python-Tools</h2>
   </hgroup>
@@ -1232,7 +1201,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-69" style="background:;">
+      <slide class="" id="slide-68" style="background:;">
   <hgroup>
     <h2>pip (python package index)</h2>
   </hgroup>
@@ -1247,7 +1216,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-70" style="background:;">
+      <slide class="" id="slide-69" style="background:;">
   <hgroup>
     <h2>virtualenv</h2>
   </hgroup>
@@ -1262,7 +1231,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-71" style="background:;">
+      <slide class="" id="slide-70" style="background:;">
   <hgroup>
     <h2>ipython</h2>
   </hgroup>
@@ -1277,7 +1246,7 @@ filter(lambda x: x % 2 == 0, range(10))
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-72" style="background:;">
+      <slide class="" id="slide-71" style="background:;">
   <hgroup>
     <h2>Peps</h2>
   </hgroup>
@@ -1285,11 +1254,6 @@ filter(lambda x: x % 2 == 0, range(10))
     <p>Python Enhancement Proposals</p>
 
 <p>Website: <a href="http://www.python.org/dev/peps/">http://www.python.org/dev/peps/</a></p>
-
-<ul>
-<li><a href="http://www.python.org/dev/peps/pep-0008/">Style Guide for Python</a></li>
-<li><a href="http://www.python.org/dev/peps/pep-0257/">Docstring</a></li>
-</ul>
 
   </article>
   <!-- Presenter Notes -->
