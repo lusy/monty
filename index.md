@@ -101,7 +101,6 @@ Gibt es auch in bunt:
 Wo finde ich Dokumentation?
 
 * pydoc
-* in der Python-Shell: `help(int)`
 * official documentation http://docs.python.org/3/
 * tutorial: http://docs.python.org/3/tutorial/index.html
 * lib ref: http://docs.python.org/3/library/index.html
@@ -180,6 +179,11 @@ Was passiert wenn wir `5 + 3 / 2.0` eingeben?
 
 Was passiert hier: `4 / 2 / 2` ?
 
+Und hier `7 / 2` ?
+Was sollte man tun, um die Antwort `3.5` zu bekommen?
+
+Sinnvolle Aufgaben hier einfügen!
+
 ---
 
 ## Boolean
@@ -217,7 +221,6 @@ Zu was wird der folgende Ausdruck ausgewertet:
 
 ```python
     x < y and y <= z
-    x < y <= z # Verkettung von Vergleichsoperatoren
 ```
 
 ---
@@ -298,10 +301,10 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ## Mutable vs Immutable Objects
 
-* Manche Objekte in python sind unveränderbar (immutable), z.B.:
-    * int, bool, str, tuple, ...
-* Andere Objekte sind veränderbar (mutable):
-    * list, dict, ...
+* Primitive Datentypen sind unveränderbar (immutable):
+    * int, bool, str, long, ...
+    * Sie können nachträglich nicht verändert werden
+* Listen, Dictionaries, etc. sind veränderbar (mutable)
 
 ---
 
@@ -521,7 +524,7 @@ einen Named Argument mit einem Defaultwert hat.
 
 ## While-Schleife
 
-    while True:
+    while(True):
         print("endless")
 
 ---
@@ -571,7 +574,7 @@ Wann braucht man die überhaupt?
 
     try:
         bad_function()
-    except Exception as e:
+    except Exception, e:
         print("catched: " +  e)
 
 ---
@@ -583,43 +586,10 @@ Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügun
 
     import datetime
     from datetime import datetime
-    from datetime import * # Achtung
+    from datetime import *
     from sys import stdout as log
 
 Jede Python-Datei ist auch ein Modul.
-
----
-
-## Module-Name (Programm Parameter)
-
-```python
-    if __name__ == '__main__':
-        print('Ich bin der Hauptprozess. Niemand hat mich importiert.')
-    else:
-        print('Ein anderes Programm benutzt (import) mich.')
-```
-
-Programm Parameter
-
-```python
-    import sys
-    if __name__ == '__main__':
-        print(sys.argv)
-
-```
-
----
-
-## imp-Module
-
-Das **imp**-Module kann im Python-Interpreter nützlich sein um bereits geladene
-Module neuzuladen:
-
-```python
-    from imp import reload
-    import foobar
-    reload(foobar)
-```
 
 ---
 
@@ -637,7 +607,7 @@ und Methoden zu finden.
 ## Eingabe / Ausgabe
 
 
-    name = input("Tell me your name")
+    name = raw_input("Tell me your name")
     print(name)
     print("So, your name is %s" % name)
 
@@ -683,16 +653,13 @@ und Methoden zu finden.
 
 ## with-statement
 
-**with** definiert einen Kontextmanager, so dass der Code im **with** nur dann
-ausgeführt wird, wenn der Kontext erstellt werden kann.
+Schließe eine Datei auf jeden Fall.
 
 ```python
     with open("example.py") as file:
-        for line in file:
-            print(line[:-1])
+        data = file.read()
+        print(data)
 ```
-
-Hier ist der Kontext die Datei, die wir öffnen wollen.
 
 ---
 
@@ -798,6 +765,12 @@ Mit der `type` Funktion können wir den Type eines Objekts erfragen.
 
 ---
 
+## Main-Funktion (Programm Parameter)
+
+    if __name__ == '__main__':
+
+---
+
 ## Anonyme Funktionen
 
     lambda x: x**2
@@ -850,6 +823,3 @@ Website: [http://ipython.org](http://ipython.org)
 Python Enhancement Proposals
 
 Website: [http://www.python.org/dev/peps/](http://www.python.org/dev/peps/)
-
-* [Style Guide for Python](http://www.python.org/dev/peps/pep-0008/)
-* [Docstring](http://www.python.org/dev/peps/pep-0257/)
