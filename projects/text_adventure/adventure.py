@@ -18,7 +18,7 @@ def pink_room():
     """
     print(surroundings)
 
-    next_move = raw_input("> ")
+    next_move = input("> ")
 
     if "candy" in next_move.lower() and "floor" in next_move.lower():
         pink_room()
@@ -41,6 +41,14 @@ def ponnies_room():
     print("blup")
 
 def cat_babies_room():
+    surroundings = """
+    """
+    print(surroundings)
+    lala = False
+
+    while True:
+        next_move = input("> ")
+
     print("anyway")
 
 
@@ -63,7 +71,7 @@ def start():
 
     print(surroundings)
 
-    next_move = raw_input("> ")
+    next_move = input("> ")
 
     if "left" in next_move:
         pink_room()
