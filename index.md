@@ -475,9 +475,10 @@ Welche Werte müssen hier als Parameter übergeben werden?
 
 ## Aufgabe2
 
-Definiere eine Funktion, die mindesten einen Standardparameter und mindesten
-einen Named Argument mit einem Defaultwert hat.
-Überlege dir einen sinnvollen Usecase, wo man so eine Funktion benutzen wollen würde.
+Definiere eine neue Funktion, die die Fläche eines Kreises berechnet und zurückgibt.
+Übergebe diesmal nicht nur den Radius des Kreises als Parameter, sondern auch
+pi=3.14 als Named Argument.
+Welche Vorteile hat die Benutzung eines Named Arguments hier?
 
 ---
 
@@ -498,6 +499,64 @@ einen Named Argument mit einem Defaultwert hat.
     len()
     str()
     print()
+
+---
+
+## Module
+
+Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
+Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügung stellen.
+
+    import datetime
+    from datetime import datetime
+    from datetime import * # Achtung
+    from sys import stdout as log
+
+Jede Python-Datei ist auch ein Modul.
+
+---
+
+## Module-Name (Programm Parameter)
+
+```python
+    if __name__ == '__main__':
+        print('Ich bin der Hauptprozess. Niemand hat mich importiert.')
+    else:
+        print('Ein anderes Programm benutzt (import) mich.')
+```
+
+Programm Parameter
+
+```python
+    import sys
+    if __name__ == '__main__':
+        print(sys.argv)
+
+```
+
+---
+
+## imp-Module
+
+Das **imp**-Module kann im Python-Interpreter nützlich sein um bereits geladene
+Module neuzuladen:
+
+```python
+    from imp import reload
+    import foobar
+    reload(foobar)
+```
+
+---
+
+## Aufgabe zu Modulen
+
+Nutze das datetime Modul um das aktuelle Datum zu erfragen. Berechne die
+Stunden, die du seit deiner Geburt auf der Erde verbracht hast. Angenommen du
+wirst 99 Jahre alt. Wie viele Sekunden bleiben dir noch?
+
+Nutze pydoc oder die Autovervollständigung von IPython um die richtigen Klassen
+und Methoden zu finden.
 
 ---
 
@@ -586,64 +645,6 @@ Wann braucht man die überhaupt?
         bad_function()
     except Exception as e:
         print("catched: " +  e)
-
----
-
-## Module
-
-Module sind logische Einheiten, die man benutzt, um Code zu organisieren.
-Die Standard-Bibliothek enthält Module, die nützliche Funktionen zur Verfügung stellen.
-
-    import datetime
-    from datetime import datetime
-    from datetime import * # Achtung
-    from sys import stdout as log
-
-Jede Python-Datei ist auch ein Modul.
-
----
-
-## Module-Name (Programm Parameter)
-
-```python
-    if __name__ == '__main__':
-        print('Ich bin der Hauptprozess. Niemand hat mich importiert.')
-    else:
-        print('Ein anderes Programm benutzt (import) mich.')
-```
-
-Programm Parameter
-
-```python
-    import sys
-    if __name__ == '__main__':
-        print(sys.argv)
-
-```
-
----
-
-## imp-Module
-
-Das **imp**-Module kann im Python-Interpreter nützlich sein um bereits geladene
-Module neuzuladen:
-
-```python
-    from imp import reload
-    import foobar
-    reload(foobar)
-```
-
----
-
-## Aufgabe zu Modulen
-
-Nutze das datetime Modul um das aktuelle Datum zu erfragen. Berechne die
-Stunden, die du seit deiner Geburt auf der Erde verbracht hast. Angenommen du
-wirst 99 Jahre alt. Wie viele Sekunden bleiben dir noch?
-
-Nutze pydoc oder die Autovervollständigung von IPython um die richtigen Klassen
-und Methoden zu finden.
 
 ---
 
