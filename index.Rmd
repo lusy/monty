@@ -309,42 +309,6 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ---
 
-## Mutable vs Immutable Objects
-
-* Manche Objekte in python sind unveränderbar (immutable), z.B.:
-    * int, bool, str, tuple, ...
-* Andere Objekte sind veränderbar (mutable):
-    * list, dict, ...
-
----
-
-## Mutable vs Immutable 2
-
-
----
-
-## Referenzen und Kopien
-
-Vergleich:
-
-    # Referenz
-    names = ["Egon", "Bert", "Hildegard", "Dörte"]
-    names2 = names
-    names.append("Ingo")
-    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # names und names2 sind zwei "Labels" für die selbe Liste
-
-vs
-
-    # Kopie
-    names = names + ["Isolde"]
-    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
-    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
-
----
-
 ## Aufgabe
 
 Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites Mal hinzu.
@@ -388,6 +352,28 @@ Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variab
 
 ---
 
+## Referenzen und Kopien
+
+Vergleich:
+
+    # Referenz
+    names = ["Egon", "Bert", "Hildegard", "Dörte"]
+    names2 = names
+    names.append("Ingo")
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names und names2 sind zwei "Labels" für die selbe Liste
+
+vs
+
+    # Kopie
+    names = names + ["Isolde"]
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
+
+---
+
 ## Tupel
     ("lala",'blup',"rrt")
 
@@ -409,6 +395,20 @@ Speichere die Telefonnummer-Information aus der vorangegangenen Aufgabe in Tupel
 
 Erstelle 3 Zweiertupel und speichere diese jeweils in Variablen, die als Elemente
 drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
+
+---
+
+## Mutable vs Immutable Objects
+
+* Manche Objekte in python sind unveränderbar (immutable), z.B.:
+    * int, bool, str, tuple, ...
+* Andere Objekte sind veränderbar (mutable):
+    * list, dict, ...
+
+---
+
+## Mutable vs Immutable 2
+
 
 ---
 
