@@ -823,37 +823,54 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
 ## Vererbung
 
-Hier ein sinnfreies Beispiel:
-
+```python
     class Animal(object):
-        hearts = 1
-        legs = 0
-        favorite_food = ""
-
-        def get_hearts(self):
-            return self.hearts
-
-        def get_favorite_food(self):
-            return self.favorite_food
+        pass
 
     class Dog(Animal):
-        legs = 4
-        favorite_food = "köfte"
+        pass
+
+    class Human(Animal):
+        pass
+```
 
 ---
 
-## Vererbung
+## Vererbung + Konstruktor (super)
 
-    class Human(Animal):
-        legs = 2
-        favorite_food = "falafel"
-        drinks_beer = True
-        hobbys = ["plays the piano", "plays chess"]
+```python
+    class Animal(object):
+        def __init__(self, name, legs):
+            self.name = name
+            self.legs = 0
 
-    class Nerd(Human):
-        favorite_food = "pizza"
-        likes_computers = True
-        hobbys = ["painting", "ponnies"]
+    class Dog(Animal):
+        def __init__(self, name):
+            super(Dog, self).__init__(name, 4)
+```
+
+---
+
+## Vererbung + Funktion
+
+```python
+    class Animal(object):
+
+        def __init__(self, name, legs):
+            self.name = name
+            self.legs = 0
+
+        def is_humanoid(self):
+            return self.legs == 2
+
+    class Dog(Animal):
+        def __init__(self, name):
+            super(Dog, self).__init__(name, 4)
+
+        def sitz(self):
+            print(self.name " macht sitz.")
+
+```
 
 ---
 
