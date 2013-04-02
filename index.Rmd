@@ -742,23 +742,81 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
 ---
 
+## Klassen
+
+---
+
 ## Klassen Definition
 
 ```python
     class Dog(object):
-        legs = 4
-        barks = True
-
-        def __init__(self, name, owner):
-            self.name = name
-            self.owner = owner
+        pass
 ```
+
+---
 
 ## Objekte instanzieren
 
 ```python
-    sharo = Dog("sharo", "philipp")
-    egon = Dog("egon", "lusy")
+    sharo = Dog()
+```
+
+---
+
+## Konstruktor
+
+```python
+    class Dog(object):
+
+        def __init__(self): # Konstruktor
+            print("Eine Hund wurde geboren.")
+
+    sharo = Dog()
+```
+
+---
+
+## Objekt-Variablen
+
+```python
+    class Dog(object):
+
+        def __init__(self, name):
+            print("Ein Hund wurde geboren.")
+            self.name = name # Objekt-Variable
+
+    bodo = Dog("bodo")
+    print(bodo.name + " sitz!")
+```
+
+---
+
+## Klassen-Variablen
+
+```python
+    class Dog(object):
+        population = 0
+```
+
+---
+
+## Konstruktor + Klassen-Variablen (Instanzen)
+
+```python
+    class Dog(object):
+        population = 0
+
+        def __init__(self): # Konstrutor
+            Dog.population += 1 # Zugriff auf Klassen-Variable
+
+    #Instanzieren und Zugriff auf Klassen-Variablen
+
+    dog0 = Dog()
+    print("Anzahl Hunde: " + Dog.population)
+    dog1 = Dog()
+    print("Anzahl Hunde: " + Dog.population)
+    print("Anzahl Hunde: " + dog1.population)
+
 ```
 
 ---
