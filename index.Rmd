@@ -320,8 +320,14 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ## Mutable vs Immutable 2
 
+
+---
+
+## Referenzen und Kopien
+
 Vergleich:
 
+    # Referenz
     names = ["Egon", "Bert", "Hildegard", "Dörte"]
     names2 = names
     names.append("Ingo")
@@ -331,6 +337,7 @@ Vergleich:
 
 vs
 
+    # Kopie
     names = names + ["Isolde"]
     # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
     # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
