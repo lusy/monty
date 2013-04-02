@@ -409,6 +409,25 @@ drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
 
 ## Mutable vs Immutable 2
 
+    #ints sind nicht veränderbar
+    >>> x = 7
+    >>> id(x)
+    9357600
+    >>> x = x + 1
+    >>> x
+    8
+    >>> id(x)
+    9357632   #x zeigt auf ein neues Objekt
+
+    #Listen sind veränderbar
+    >>> a = [1,2,3]
+    >>> id(a)
+    41770952
+    >>> a.append(4)
+    >>> a
+    [1, 2, 3, 4]
+    >>> id(a)
+    41770952    #a zeigt immer noch auf das selbe Objekt; das Objekt wurde verändert
 
 ---
 
