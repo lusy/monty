@@ -309,35 +309,6 @@ Um die Fragen zu beantworten kannst du in die Dokumentation nach geeigneten Funk
 
 ---
 
-## Mutable vs Immutable Objects
-
-* Manche Objekte in python sind unveränderbar (immutable), z.B.:
-    * int, bool, str, tuple, ...
-* Andere Objekte sind veränderbar (mutable):
-    * list, dict, ...
-
----
-
-## Mutable vs Immutable 2
-
-Vergleich:
-
-    names = ["Egon", "Bert", "Hildegard", "Dörte"]
-    names2 = names
-    names.append("Ingo")
-    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # names und names2 sind zwei "Labels" für die selbe Liste
-
-vs
-
-    names = names + ["Isolde"]
-    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
-    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
-    # bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
-
----
-
 ## Aufgabe
 
 Füge Egon in die Liste aus der vorherigen Aufgabe ein zweites Mal hinzu.
@@ -381,6 +352,28 @@ Schaue die Nummer von Egon in `telefonbuch` nach und speichere sie in der Variab
 
 ---
 
+## Referenzen und Kopien
+
+Vergleich:
+
+    # Referenz
+    names = ["Egon", "Bert", "Hildegard", "Dörte"]
+    names2 = names
+    names.append("Ingo")
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # names und names2 sind zwei "Labels" für die selbe Liste
+
+vs
+
+    # Kopie
+    names = names + ["Isolde"]
+    # names = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo", "Isolde"]
+    # names2 = ["Egon", "Bert", "Hildegard", "Dörte", "Ingo"]
+    # bei names wurde eine neue Liste erstellt und an wieder in die selbe Variable gespeichert
+
+---
+
 ## Tupel
     ("lala",'blup',"rrt")
 
@@ -402,6 +395,39 @@ Speichere die Telefonnummer-Information aus der vorangegangenen Aufgabe in Tupel
 
 Erstelle 3 Zweiertupel und speichere diese jeweils in Variablen, die als Elemente
 drei der Name-Telefonnummer-Paare aus der Dictionaries-Aufgabe haben.
+
+---
+
+## Mutable vs Immutable Objects
+
+* Manche Objekte in python sind unveränderbar (immutable), z.B.:
+    * int, bool, str, tuple, ...
+* Andere Objekte sind veränderbar (mutable):
+    * list, dict, ...
+
+---
+
+## Mutable vs Immutable 2
+
+    #ints sind nicht veränderbar
+    >>> x = 7
+    >>> id(x)
+    9357600
+    >>> x = x + 1
+    >>> x
+    8
+    >>> id(x)
+    9357632   #x zeigt auf ein neues Objekt
+
+    #Listen sind veränderbar
+    >>> a = [1,2,3]
+    >>> id(a)
+    41770952
+    >>> a.append(4)
+    >>> a
+    [1, 2, 3, 4]
+    >>> id(a)
+    41770952    #a zeigt immer noch auf das selbe Objekt; das Objekt wurde verändert
 
 ---
 
@@ -742,60 +768,135 @@ Lieblingslied. Alle Angaben sollen auf eine neue Zeile kommen nach dem Muster
 
 ---
 
+## Klassen
+
+---
+
 ## Klassen Definition
 
 ```python
     class Dog(object):
-        legs = 4
-        barks = True
-
-        def __init__(self, name, owner):
-            self.name = name
-            self.owner = owner
+        pass
 ```
+
+---
 
 ## Objekte instanzieren
 
 ```python
-    sharo = Dog("sharo", "philipp")
-    egon = Dog("egon", "lusy")
+    sharo = Dog()
+```
+
+---
+
+## Konstruktor
+
+```python
+    class Dog(object):
+
+        def __init__(self): # Konstruktor
+            print("Eine Hund wurde geboren.")
+
+    sharo = Dog()
+```
+
+---
+
+## Objekt-Variablen
+
+```python
+    class Dog(object):
+
+        def __init__(self, name):
+            print("Ein Hund wurde geboren.")
+            self.name = name # Objekt-Variable
+
+    bodo = Dog("bodo")
+    print(bodo.name + " sitz!")
+```
+
+---
+
+## Klassen-Variablen
+
+```python
+    class Dog(object):
+        population = 0
+```
+
+---
+
+## Konstruktor + Klassen-Variablen (Instanzen)
+
+```python
+    class Dog(object):
+        population = 0
+
+        def __init__(self): # Konstrutor
+            Dog.population += 1 # Zugriff auf Klassen-Variable
+
+    #Instanzieren und Zugriff auf Klassen-Variablen
+
+    dog0 = Dog()
+    print("Anzahl Hunde: " + Dog.population)
+    dog1 = Dog()
+    print("Anzahl Hunde: " + Dog.population)
+    print("Anzahl Hunde: " + dog1.population)
+
 ```
 
 ---
 
 ## Vererbung
 
-Hier ein sinnfreies Beispiel:
-
+```python
     class Animal(object):
-        hearts = 1
-        legs = 0
-        favorite_food = ""
-
-        def get_hearts(self):
-            return self.hearts
-
-        def get_favorite_food(self):
-            return self.favorite_food
+        pass
 
     class Dog(Animal):
-        legs = 4
-        favorite_food = "köfte"
+        pass
+
+    class Human(Animal):
+        pass
+```
 
 ---
 
-## Vererbung
+## Vererbung + Konstruktor (super)
 
-    class Human(Animal):
-        legs = 2
-        favorite_food = "falafel"
-        drinks_beer = True
-        hobbys = ["plays the piano", "plays chess"]
+```python
+    class Animal(object):
+        def __init__(self, name, legs):
+            self.name = name
+            self.legs = 0
 
-    class Nerd(Human):
-        favorite_food = "pizza"
-        likes_computers = True
-        hobbys = ["painting", "ponnies"]
+    class Dog(Animal):
+        def __init__(self, name):
+            super(Dog, self).__init__(name, 4)
+```
+
+---
+
+## Vererbung + Funktion
+
+```python
+    class Animal(object):
+
+        def __init__(self, name, legs):
+            self.name = name
+            self.legs = 0
+
+        def is_humanoid(self):
+            return self.legs == 2
+
+    class Dog(Animal):
+        def __init__(self, name):
+            super(Dog, self).__init__(name, 4)
+
+        def sitz(self):
+            print(self.name " macht sitz.")
+
+```
 
 ---
 
